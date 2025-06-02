@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://www.navaura.in/sitemap.xml
+
