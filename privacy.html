@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - NAVAURA ARCTIQ - Next-Gen Web Development Platform</title>
-  <meta name="description" content="Privacy Policy for Navaura Arctiq. Learn how we protect and handle your personal information." />
-  <meta name="keywords" content="privacy policy, data protection, navaura arctiq, personal information" />
+  <title>Terms of Service - NAVAURA ARCTIQ - Next-Gen Web Development Platform</title>
+  <meta name="description" content="Terms of Service for Navaura Arctiq web development platform. Read our terms and conditions for using our services." />
+  <meta name="keywords" content="terms of service, navaura arctiq, web development, platform terms, legal" />
   <meta name="author" content="Navaura Arctiq" />
-  <meta property="og:title" content="Privacy Policy - NAVAURA ARCTIQ" />
-  <meta property="og:description" content="Our commitment to protecting your privacy and personal data." />
+  <meta property="og:title" content="Terms of Service - NAVAURA ARCTIQ" />
+  <meta property="og:description" content="Terms of Service for the next-generation web development platform." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,31 +16,28 @@
   <script src="tailwindcss.js"></script>
   <link rel="stylesheet" href="basevaura.css">
   <script>
-    // Wait for DOM to be fully loaded
     document.addEventListener('DOMContentLoaded', function() {
-        // Hamburger menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (hamburger && mobileMenu) {
+        let isActive = false;
         
-        if (hamburger && mobileMenu) {
-            let isActive = false;
-            
-            hamburger.addEventListener('click', () => {
-                isActive = !isActive;
-                hamburger.classList.toggle('active', isActive);
-                mobileMenu.classList.toggle('active', isActive);
-            });
-            
-            // Close menu when clicking on a link
-            const navLinks = mobileMenu.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    isActive = false;
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                });
-            });
-        }
+        hamburger.addEventListener('click', () => {
+          isActive = !isActive;
+          hamburger.classList.toggle('active', isActive);
+          mobileMenu.classList.toggle('active', isActive);
+        });
+        
+        const navLinks = mobileMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            isActive = false;
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+          });
+        });
+      }
     });
   </script>
   <script src="https://www.navaura.in/chatui.js"></script>
@@ -52,46 +49,46 @@
   <!-- Professional Navigation -->
   <nav class="fixed top-0 w-full z-50 nav-blur">
     <div class="flex justify-between items-center px-6 py-4">
-        <!-- Logo Section -->
-        <div class="flex items-center space-x-3">
-            <!-- Logo Icon -->
-            <div class="logo-icon w-12 h-12 rounded-lg flex items-center justify-center">
-                <img src="https://www.navaura.in/logow.png" alt="NAVAURA Logo">
-            </div>
-            <!-- Brand Text -->
-            <div class="text-2xl font-bold tracking-tight">
-                <span class="text-white">NAVAURA</span><span class="text-x=s font-normal text-gray-400 tracking-wider align-top">™</span><br>
-                <span class="text-cyan-400 ml-1">arctiq</span>
-            </div>
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-3">
+        <!-- Logo Icon -->
+        <div class="logo-icon w-12 h-12 rounded-lg flex items-center justify-center">
+          <img src="https://www.navaura.in/logow.png" alt="NAVAURA Logo">
         </div>
+        <!-- Brand Text -->
+        <div class="text-2xl font-bold tracking-tight">
+          <span class="text-white">NAVAURA</span><span class="text-x=s font-normal text-gray-400 tracking-wider align-top">™</span><br>
+          <span class="text-cyan-400 ml-1">arctiq</span>
+        </div>
+      </div>
+      
+      <!-- Right Section -->
+      <div class="flex items-center space-x-4">
+        <!-- Get Started Button -->
+        <a href="./" class="btn-primary text-black px-6 py-2.5 rounded-full text-sm font-semibold">
+          Home
+        </a>
         
-        <!-- Right Section -->
-        <div class="flex items-center space-x-4">
-            <!-- Get Started Button -->
-            <a href="./" class=" btn-primary text-black px-6 py-2.5 rounded-full text-sm font-semibold">
-                Home
-            </a>
-            
-            <!-- Hamburger Menu -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
     </div>
     
     <!-- Mobile Menu Dropdown -->
     <div class="mobile-menu" id="mobile-menu">
-        <div class="px-6 py-6 space-y-4">
-            <a href="#features" class="nav-link block text-white text-lg font-medium py-2">Features</a>
-            <a href="#pricing" class="nav-link block text-white text-lg font-medium py-2">Pricing</a>
-            <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
-            <a href="./contactus" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
-            <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
-            <a href="./services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
-            <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
-        </div>
+      <div class="px-6 py-6 space-y-4">
+        <a href="#features" class="nav-link block text-white text-lg font-medium py-2">Features</a>
+        <a href="#pricing" class="nav-link block text-white text-lg font-medium py-2">Pricing</a>
+        <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
+        <a href="./contactus" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
+        <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
+        <a href="./services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
+        <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
+      </div>
     </div>
   </nav>
 
@@ -99,14 +96,14 @@
   <section class="relative flex flex-col items-center justify-center min-h-screen z-10 text-center px-6 pt-20">
     <div class="max-w-6xl mx-auto">
       <h1 class="hero-title text-6xl sm:text-7xl lg:text-8xl font-black mb-8 slide-up">
-        Privacy<br>Policy<span class="text-cyan-400">.</span>
+        Terms of<br>Service<span class="text-cyan-400">.</span>
       </h1>
       <p class="text-xl sm:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 text-gray-200 font-light leading-relaxed slide-up" style="animation-delay: 0.2s;">
-        Your <em class="text-cyan-400 not-italic font-medium">privacy matters</em> to us.<br>
-        Here's how we protect your data.
+        Our commitment to <em class="text-cyan-400 not-italic font-medium">transparent service</em><br>
+        and your rights as our valued user.
       </p>
       <div class="text-lg text-gray-400 slide-up" style="animation-delay: 0.4s;">
-        <p>Last updated: June 3, 2025</p>
+        Last updated: June 3, 2025
       </div>
     </div>
   </section>
@@ -116,157 +113,245 @@
     <div class="bottom-bar" style="position: absolute;"></div>
   </div>
 
-  <!-- Privacy Policy Content -->
+  <!-- Terms Content Section -->
   <section class="relative z-10 section-padding px-6">
     <div class="max-w-5xl mx-auto">
-      
-      <!-- Overview Section -->
-      <div class="glass-strong p-12 rounded-3xl mb-12">
-        <h2 class="text-4xl font-bold mb-8 text-cyan-400">Our Commitment</h2>
-        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-          At Navaura Arctiq (OPC) Private Limited, we are committed to protecting your privacy and personal information. This policy explains how we collect, use, and safeguard your data when you use our platform and services.
-        </p>
-        <p class="text-lg text-gray-300 leading-relaxed">
-          We believe in transparency and your right to understand how your information is handled. This policy applies to all users of our web development platform and services.
-        </p>
-      </div>
-
-      <!-- Information We Collect -->
-      <div class="glass p-10 rounded-3xl mb-12 hover-lift">
-        <h3 class="text-3xl font-bold mb-6 text-purple-400">Information We Collect</h3>
-        
-        <div class="space-y-6">
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Personal Information</h4>
-            <p class="text-gray-300 leading-relaxed">
-              When you contact us or use our services, we may collect your name, email address, phone number, and any information you provide in forms or communications.
-            </p>
-          </div>
-          
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Usage Data</h4>
-            <p class="text-gray-300 leading-relaxed">
-              We collect information about how you interact with our platform, including pages visited, features used, and technical data like IP address and browser type.
-            </p>
-          </div>
-          
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Cookies & Analytics</h4>
-            <p class="text-gray-300 leading-relaxed">
-              We use cookies and similar technologies to improve your experience and analyze platform usage. You can control cookie preferences through your browser settings.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- How We Use Information -->
-      <div class="glass p-10 rounded-3xl mb-12 hover-lift">
-        <h3 class="text-3xl font-bold mb-6 text-green-400">How We Use Your Information</h3>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="space-y-4">
-            <div class="flex items-start space-x-3">
-              <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-              <p class="text-gray-300">Provide and improve our platform services</p>
-            </div>
-            <div class="flex items-start space-x-3">
-              <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-              <p class="text-gray-300">Respond to your inquiries and support requests</p>
-            </div>
-            <div class="flex items-start space-x-3">
-              <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-              <p class="text-gray-300">Send important platform updates and notifications</p>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <div class="flex items-start space-x-3">
-              <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-              <p class="text-gray-300">Analyze usage patterns to enhance user experience</p>
-            </div>
-            <div class="flex items-start space-x-3">
-              <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-              <p class="text-gray-300">Comply with legal obligations and prevent fraud</p>
-            </div>
-            <div class="flex items-start space-x-3">
-              <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-              <p class="text-gray-300">Send newsletters (with your consent)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Data Protection -->
-      <div class="glass p-10 rounded-3xl mb-12 hover-lift">
-        <h3 class="text-3xl font-bold mb-6 text-pink-400">Data Protection & Security</h3>
-        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-          We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. This includes encryption, secure servers, and regular security audits.
-        </p>
-        <p class="text-lg text-gray-300 leading-relaxed">
-          While we strive to protect your data, no internet transmission is 100% secure. We encourage you to use strong passwords and keep your account information confidential.
-        </p>
-      </div>
-
-      <!-- Your Rights -->
-      <div class="glass p-10 rounded-3xl mb-12 hover-lift">
-        <h3 class="text-3xl font-bold mb-6 text-cyan-400">Your Rights</h3>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Access & Control</h4>
-            <p class="text-gray-300 leading-relaxed">
-              You have the right to access, update, or delete your personal information. Contact us to exercise these rights or update your preferences.
-            </p>
-          </div>
-          
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Opt-Out</h4>
-            <p class="text-gray-300 leading-relaxed">
-              You can unsubscribe from our newsletters at any time and control cookie preferences through your browser settings.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Third-Party Services -->
-      <div class="glass p-10 rounded-3xl mb-12 hover-lift">
-        <h3 class="text-3xl font-bold mb-6 text-yellow-400">Third-Party Services</h3>
-        <p class="text-lg text-gray-300 leading-relaxed mb-4">
-          Our platform may integrate with third-party services for analytics, payment processing, or enhanced functionality. These services have their own privacy policies, and we encourage you to review them.
-        </p>
-        <p class="text-lg text-gray-300 leading-relaxed">
-          We do not sell, trade, or rent your personal information to third parties for marketing purposes.
-        </p>
-      </div>
-
-      <!-- Contact Information -->
       <div class="glass-strong p-12 rounded-3xl">
-        <h3 class="text-3xl font-bold mb-6 text-cyan-400">Questions About Privacy?</h3>
-        <p class="text-lg text-gray-300 leading-relaxed mb-8">
-          If you have any questions about this Privacy Policy or how we handle your data, please don't hesitate to contact us.
-        </p>
         
-        <div class="grid md:grid-cols-2 gap-8">
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Email Us</h4>
-            <a href="mailto:namaskar@navaura.in" class="text-cyan-400 hover:text-cyan-300 text-lg font-medium">namaskar@navaura.in</a>
-          </div>
-          
-          <div>
-            <h4 class="text-xl font-semibold mb-3 text-white">Call Us</h4>
-            <div class="space-y-2">
-              <a href="tel:+919073888611" class="block text-purple-400 hover:text-purple-300 text-lg font-medium">+91 90738 88611</a>
-              <a href="tel:+918240591128" class="block text-purple-400 hover:text-purple-300 text-lg font-medium">+91 82405 91128</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="mt-8 pt-8 border-t border-gray-700">
-          <p class="text-gray-400 text-sm">
-            We will respond to privacy-related inquiries within 48 hours and make every effort to resolve your concerns promptly.
+        <!-- Introduction -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-cyan-400">Introduction</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Welcome to Navaura Arctiq (OPC) Private Limited ("we," "us," or "our"). These Terms of Service ("Terms") govern your use of our web development platform and services (the "Service") operated by Navaura Arctiq.
+          </p>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.
           </p>
         </div>
-      </div>
 
+        <!-- Acceptance of Terms -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-purple-400">Acceptance of Terms</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-4">
+            By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
+          </p>
+          <ul class="text-gray-300 text-lg leading-relaxed space-y-3 ml-6">
+            <li>• You must be at least 18 years old to use our services</li>
+            <li>• You represent that you have the authority to enter into this agreement</li>
+            <li>• Your use of the service is at your sole risk</li>
+          </ul>
+        </div>
+
+        <!-- Service Description -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-pink-400">Service Description</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Navaura Arctiq provides a comprehensive web development platform that includes:
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-6 rounded-2xl">
+              <h3 class="text-xl font-semibold text-cyan-400 mb-3">Platform Services</h3>
+              <ul class="text-gray-300 space-y-2">
+                <li>• Web application deployment</li>
+                <li>• Infrastructure management</li>
+                <li>• Performance optimization</li>
+                <li>• Security monitoring</li>
+              </ul>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+              <h3 class="text-xl font-semibold text-purple-400 mb-3">Support Services</h3>
+              <ul class="text-gray-300 space-y-2">
+                <li>• Technical support</li>
+                <li>• Documentation access</li>
+                <li>• Community forums</li>
+                <li>• Training resources</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+<!-- Refund Policy -->
+<div class="mb-12">
+  <h2 class="text-4xl font-bold mb-6 text-orange-400">Refund Policy</h2>
+  <p class="text-gray-300 text-lg leading-relaxed mb-6">
+    Our refund policy is designed to be fair while protecting the integrity of our service offerings.
+  </p>
+  <div class="glass p-8 rounded-2xl bg-orange-900/10 border-l-4 border-orange-400">
+    <h3 class="text-xl font-semibold text-orange-400 mb-4">No Refund Policy</h3>
+    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+      <strong>All payments made for our services are final and non-refundable.</strong> This policy applies to all subscription plans, one-time purchases, and additional services.
+    </p>
+    
+    <div class="glass p-6 rounded-2xl mb-6">
+      <h4 class="text-lg font-semibold text-cyan-400 mb-4">Exception: Payment Processing Issues</h4>
+      <p class="text-gray-300 leading-relaxed mb-4">
+        The only circumstance under which a refund may be considered is when:
+      </p>
+      <ul class="text-gray-300 space-y-3 ml-4">
+        <li>• Money has been deducted from your account</li>
+        <li>• Your plan or service has not been activated despite successful payment</li>
+        <li>• You report the issue within <strong class="text-orange-400">7 days</strong> of the transaction</li>
+      </ul>
+    </div>
+    
+    <div class="glass p-6 rounded-2xl bg-cyan-900/20">
+      <h4 class="text-lg font-semibold text-cyan-400 mb-4">Resolution Process</h4>
+      <p class="text-gray-300 leading-relaxed mb-4">
+        When you report a payment processing issue within the 7-day window, we will:
+      </p>
+      <ol class="text-gray-300 space-y-2 ml-4">
+        <li><strong class="text-cyan-400">1. Investigate</strong> the payment and activation status</li>
+        <li><strong class="text-purple-400">2. Attempt to resolve</strong> the activation issue and make your plan active</li>
+        <li><strong class="text-pink-400">3. Process a refund</strong> only if the activation cannot be completed</li>
+      </ol>
+    </div>
+    
+    <div class="mt-6 p-4 rounded-xl bg-red-900/20 border border-red-400/30">
+      <p class="text-red-200 text-sm">
+        <strong>Important:</strong> Complaints submitted after 7 days of the transaction date will not be eligible for refund consideration, regardless of the circumstances.
+      </p>
+    </div>
+  </div>
+</div>
+        <!-- User Responsibilities -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-green-400">User Responsibilities</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            As a user of our platform, you agree to:
+          </p>
+          <div class="glass p-8 rounded-2xl">
+            <ul class="text-gray-300 text-lg leading-relaxed space-y-4">
+              <li><strong class="text-cyan-400">Account Security:</strong> Maintain the confidentiality of your account credentials and be responsible for all activities under your account.</li>
+              <li><strong class="text-purple-400">Lawful Use:</strong> Use our services only for lawful purposes and in accordance with applicable laws and regulations.</li>
+              <li><strong class="text-pink-400">Content Responsibility:</strong> Ensure that any content you upload or deploy through our platform does not violate any third-party rights or applicable laws.</li>
+              <li><strong class="text-green-400">Resource Usage:</strong> Use platform resources responsibly and not engage in activities that may harm the platform or other users.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Prohibited Uses -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-red-400">Prohibited Uses</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            You may not use our service:
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-6 rounded-2xl border-l-4 border-red-400">
+              <h3 class="text-xl font-semibold text-red-400 mb-3">Illegal Activities</h3>
+              <ul class="text-gray-300 space-y-2">
+                <li>• For any unlawful purpose</li>
+                <li>• To violate any regulations</li>
+                <li>• To infringe on intellectual property</li>
+                <li>• To transmit harmful code</li>
+              </ul>
+            </div>
+            <div class="glass p-6 rounded-2xl border-l-4 border-orange-400">
+              <h3 class="text-xl font-semibold text-orange-400 mb-3">Platform Abuse</h3>
+              <ul class="text-gray-300 space-y-2">
+                <li>• To overload our systems</li>
+                <li>• To attempt unauthorized access</li>
+                <li>• To interfere with other users</li>
+                <li>• To reverse engineer our platform</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacy and Data -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-blue-400">Privacy and Data</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information when you use our Service.
+          </p>
+          <div class="glass p-6 rounded-2xl bg-blue-900/20">
+            <p class="text-blue-200 text-lg">
+              By using our Service, you agree to the collection and use of information in accordance with our Privacy Policy. 
+              <a href="./privacy" class="text-cyan-400 hover:text-cyan-300 underline font-medium">Read our Privacy Policy</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Limitation of Liability -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-yellow-400">Limitation of Liability</h2>
+          <div class="glass p-8 rounded-2xl bg-yellow-900/10">
+            <p class="text-gray-300 text-lg leading-relaxed mb-4">
+              In no event shall Navaura Arctiq (OPC) Private Limited, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, punitive, consequential, or special damages.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed">
+              Our total liability to you for any damages shall not exceed the amount paid by you to us in the twelve (12) months preceding the event giving rise to the liability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Availability -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-indigo-400">Service Availability</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            We strive to maintain high service availability, but we cannot guarantee uninterrupted service.
+          </p>
+          <div class="glass p-6 rounded-2xl">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-4">Service Level</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• We target 99.99% uptime for our platform</li>
+              <li>• Scheduled maintenance will be announced in advance</li>
+              <li>• Emergency maintenance may occur without notice</li>
+              <li>• Service credits may be available for extended outages</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Termination -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-red-400">Termination</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            We may terminate or suspend your account and access to the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-6 rounded-2xl">
+              <h3 class="text-xl font-semibold text-red-400 mb-3">By Us</h3>
+              <p class="text-gray-300">We may terminate your access for violations of these terms or for any other reason at our discretion.</p>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+              <h3 class="text-xl font-semibold text-orange-400 mb-3">By You</h3>
+              <p class="text-gray-300">You may terminate your account at any time by contacting us or through your account settings.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Changes to Terms -->
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-6 text-teal-400">Changes to Terms</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.
+          </p>
+          <div class="glass p-6 rounded-2xl bg-teal-900/20">
+            <p class="text-teal-200">
+              What constitutes a material change will be determined at our sole discretion. Your continued use of the Service after we post any modifications to the Terms constitutes acceptance of those changes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="mb-8">
+          <h2 class="text-4xl font-bold mb-6 text-cyan-400">Contact Us</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            If you have any questions about these Terms of Service, please contact us:
+          </p>
+          <div class="glass p-8 rounded-2xl">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Email</h3>
+                <a href="mailto:namaskar@navaura.in" class="text-white hover:text-cyan-400 text-lg">namaskar@navaura.in</a>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-purple-400 mb-4">Address</h3>
+                <p class="text-white text-lg">Kolkata, West Bengal, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -297,11 +382,6 @@
             <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76h-.03c-1.22 0-2-.83-2-1.87 0-1.06.8-1.87 2.05-1.87 1.24 0 2 .8 2.02 1.87 0 1.04-.78 1.87-2.05 1.87zM20.34 20.1h-3.63v-5.8c0-1.45-.52-2.45-1.83-2.45-1 0-1.6.67-1.87 1.32-.1.23-.11.55-.11.88v6.05H9.28s.05-9.82 0-10.84h3.63v1.54a3.6 3.6 0 0 1 3.26-1.8c2.39 0 4.18 1.56 4.18 4.89v6.21z"/>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.098.118.112.222.082.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.162-1.5 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.098.118.112.222.082.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.162-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.63-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.017.001z"/>
               </svg>
             </a>
           </div>
@@ -343,8 +423,8 @@
           © 2025 Navaura Arctiq (OPC) Private Limited. All rights reserved.
         </div>
         <div class="flex space-x-8 text-sm">
-          <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a>
-          <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Terms of Service</a>
+          <a href="./privacy" class="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+          <a href="./terms" class="text-cyan-400 font-medium">Terms of Service</a>
           <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Cookie Policy</a>
         </div>
       </div>
@@ -375,14 +455,26 @@
     }
     animateCursor();
 
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
     // Performance Optimization
     let ticking = false;
     
     function updateOnScroll() {
-      // Throttled scroll events for better performance
       if (!ticking) {
         requestAnimationFrame(() => {
-          // Add scroll-based animations here
           ticking = false;
         });
         ticking = true;
