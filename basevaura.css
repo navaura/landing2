@@ -1,0 +1,324 @@
+   /* Enhanced Typography */
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    /* Professional Grunge Background */
+    body {
+      background: #0a0a0a url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+      cursor: none;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    
+    /* Enhanced Grid overlay */
+    .grid-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    /* Professional RGB Gradient */
+.gradient-glow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70vh;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 120%, 
+    rgba(6, 182, 212, 0.15), 
+    rgba(168, 85, 247, 0.1), 
+    rgba(236, 72, 153, 0.08),
+    transparent 70%);
+  background-size: 600% 600%;
+  animation: professionalPulse 15s ease infinite;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%);
+  transition: position 0.3s ease;
+  z-index: 5;
+}
+    
+    @keyframes professionalPulse {
+      0%, 100% { background-position: 50% 100%; opacity: 0.8; }
+      33% { background-position: 20% 80%; opacity: 0.6; }
+      66% { background-position: 80% 60%; opacity: 0.9; }
+    }
+    
+    /* Refined Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgb(255, 255, 255); /* subtle fallback color */
+
+  mix-blend-mode: difference;
+  z-index: 2147483647;
+
+  transition: transform 0.1s ease;
+}
+
+/* Firefox fallback */
+@-moz-document url-prefix() {
+  .custom-cursor {
+    background: rgb(255, 255, 255);
+
+    mix-blend-mode: difference; 
+  }
+}
+    
+    /* Enhanced Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .glass-strong {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(25px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Professional Hover Effects */
+    .hover-lift {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(6, 182, 212, 0.15);
+    }
+    
+    /* Refined Neon Glow */
+    .neon-glow {
+      box-shadow: 
+        0 0 20px rgba(6, 182, 212, 0.3),
+        0 0 40px rgba(6, 182, 212, 0.2),
+        0 0 80px rgba(6, 182, 212, 0.1);
+      animation: professionalNeon 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes professionalNeon {
+      from { 
+        box-shadow: 
+          0 0 20px rgba(6, 182, 212, 0.3),
+          0 0 40px rgba(6, 182, 212, 0.2),
+          0 0 80px rgba(6, 182, 212, 0.1);
+      }
+      to { 
+        box-shadow: 
+          0 0 30px rgba(6, 182, 212, 0.5),
+          0 0 60px rgba(6, 182, 212, 0.3),
+          0 0 100px rgba(6, 182, 212, 0.15);
+      }
+    }
+    
+    /* Professional Animations */
+    .slide-up {
+      opacity: 0;
+      transform: translateY(60px);
+      animation: professionalSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+    
+    @keyframes professionalSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Enhanced Navigation */
+    .nav-blur {
+      backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(10, 10, 10, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    /* Professional Button Styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0891b2, #0e7490);
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    /* Refined Typography */
+    .hero-title {
+      background: linear-gradient(135deg, #ffffff, #e2e8f0, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+    
+    /* Professional Spacing */
+    .section-padding {
+      padding: 5rem 0;
+    }
+    
+    @media (min-width: 768px) {
+      .section-padding {
+        padding: 7rem 0;
+      }
+    }
+    
+    /* Form Styles */
+    .form-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(6, 182, 212, 0.5);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+      outline: none;
+    }
+    
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .bottom-bar {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-color: #ffffff;
+      z-index: 99;
+    }
+    /* Firefox fallback */
+@-moz-document url-prefix() {
+  .custom-cursor {
+    background: rgb(255, 255, 255);
+    mix-blend-mode: difference; 
+  }
+}
+
+/* ENHANCED MOBILE CURSOR DISABLE - Multiple Detection Methods */
+/* Method 1: Touch Device Detection */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 2: Screen Size Detection */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 3: Combined Touch and Small Screen */
+@media (max-width: 1024px) and (hover: none) {
+  .custom-cursor {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 4: Orientation Detection for Mobile */
+@media (orientation: portrait) and (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 5: Additional Touch Device Detection */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+        .hamburger {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger:hover {
+            opacity: 0.7;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .mobile-menu {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #00bcd4;
+        }

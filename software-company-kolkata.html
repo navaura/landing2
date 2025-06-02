@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Company in Kolkata – Navaura Arctiq</title>
+  <meta name="description" content="Navaura Arctiq is a top-tier software company in Kolkata offering cutting-edge AI, web, and mobile solutions. Empower your business with smart, scalable technology." />
+  <meta name="keywords" content="software company Kolkata, web development Kolkata, AI company West Bengal, Navaura Arctiq, Kolkata IT" />
+  <meta name="author" content="Navaura Arctiq" />
+  <meta property="og:title" content="Software Company in Kolkata – Navaura Arctiq" />
+  <meta property="og:description" content="Top Software Company in Kolkata specializing in AI-driven development. Discover Navaura Arctiq." />
+  <meta property="og:type" content="website" />
+  <script src="tailwindcss.js"></script>
+<link rel="stylesheet" href="basevaura.css">
+
+            <script>
+       // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (hamburger && mobileMenu) {
+                let isActive = false;
+                
+                hamburger.addEventListener('click', () => {
+                    isActive = !isActive;
+                    hamburger.classList.toggle('active', isActive);
+                    mobileMenu.classList.toggle('active', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = mobileMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        isActive = false;
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body class="text-white">
+  <!-- Enhanced Grid and Background -->
+  <div class="grid-bg absolute inset-0 z-0"></div>
+  
+  <!-- Professional Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur"style="z-index: 9999;">
+        <div class="flex justify-between items-center px-6 py-4">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo Icon -->
+                <div class="logo-icon w-12 h-12 rounded-lg flex items-center justify-center">
+                    <img src="https://www.navaura.in/logow.png" alt="NAVAURA Logo">
+                </div>
+                <!-- Brand Text -->
+                <div class="text-2xl font-bold tracking-tight">
+                    <span class="text-white">NAVAURA</span>
+                    <span class="text-cyan-400 ml-1">arctiq</span>
+                </div>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <!-- Get Started Button -->
+                <button class="chatui btn-primary text-black px-6 py-2.5 rounded-full text-sm font-semibold">
+                    Chat with Us 24/7
+                </button>
+                
+                <!-- Hamburger Menu -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="px-6 py-6 space-y-4">
+              <a href="./" class="nav-link block text-white text-lg font-medium py-2">Home</a>
+               <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
+                <a href="./contactus" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
+               <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
+            </div>
+        </div>
+    </nav>
+
+  <!-- HERO SECTION -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+    <h1 class="text-6xl font-extrabold hero-title mb-6">
+      Top Software Company in<br><span class="text-cyan-400">Kolkata</span>
+    </h1>
+    <p class="text-xl text-gray-300 max-w-2xl mb-10">
+      Navaura Arctiq is revolutionizing digital transformation from the heart of West Bengal. We combine AI, automation, and scalable tech to power startups, SMEs, and enterprises across India.
+    </p>
+ <a href="#contact" class="btn-primary text-black px-8 py-4 rounded-full font-semibold" style="
+    z-index: 99;
+">Let’s Build Together</a>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services px-6 bg-black"id="services">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-cyan-400 mb-4">Custom Software</h3>
+        <p class="text-gray-300">Tailored applications built for your exact business goals, using modern stacks and agile methods.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-purple-400 mb-4">AI & Automation</h3>
+        <p class="text-gray-300">Integrate AI agents, chatbots, auto workflows, and data systems to run your company on autopilot.</p>
+      </div>
+      <div class="glass p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold text-pink-400 mb-4">Web & Mobile</h3>
+        <p class="text-gray-300">Privacy and Robust-first, lightning-fast websites and apps built with performance and UX at the core.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-cursor" id="cursor"></div>
+  
+  <!-- CONTACT CTA -->
+  <section class="section-padding px-6 bg-gray-900" id="contact">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold hero-title mb-4">Hire a Software Partner</h2>
+      <p class="text-lg text-gray-400 mb-6">Whether you're building from scratch or upgrading legacy systems, Navaura is your tech ally.</p>
+      <a href="./contactus" class="btn-primary text-black px-8 py-4 rounded-full font-semibold">Reach Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (reuse your existing footer here) -->
+  <footer class="py-10 px-6 border-t border-gray-800 text-center">
+    <p class="text-gray-500 text-sm">&copy; 2025 Navaura<sup>™</sup> Arctiq. Crafted with ❤️ in Kolkata.</p>
+  </footer>
+    <!-- Professional JavaScript -->
+  <script>
+    // Enhanced cursor tracking with smooth animation
+    const cursor = document.getElementById('cursor');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    
+    // Smooth cursor animation with requestAnimationFrame
+    function animateCursor() {
+      const speed = 0.15;
+      cursorX += (mouseX - cursorX) * speed;
+      cursorY += (mouseY - cursorY) * speed;
+      
+      cursor.style.left = `${cursorX - 40}px`;
+      cursor.style.top = `${cursorY - 40}px`;
+      
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+    
+    // Enhanced smooth scrolling with offset for fixed navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navHeight = 80;
+          const targetPosition = target.offsetTop - navHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Professional scroll-based navigation background
+    let lastScrollTop = 0;
+    const nav = document.querySelector('nav');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 100) {
+        nav.style.background = 'rgba(10, 10, 10, 0.95)';
+        nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+      } else {
+        nav.style.background = 'rgba(10, 10, 10, 0.8)';
+        nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+      }
+      
+      lastScrollTop = scrollTop;
+    }, { passive: true });
+    
+    // Enhanced intersection observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const slideUpObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all slide-up elements
+    document.querySelectorAll('.slide-up').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      slideUpObserver.observe(el);
+    });
+    
+    // Professional button hover effects
+    document.querySelectorAll('button, .hover-lift').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'scale(1.5)';
+        cursor.style.opacity = '0.8';
+      });
+      
+      button.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'scale(1)';
+        cursor.style.opacity = '1';
+      });
+    });
+    
+    // Loading animation enhancement
+    const loadingDots = document.querySelectorAll('.loading-dot');
+    loadingDots.forEach((dot, index) => {
+      dot.style.animationDelay = `${index * 0.5}s`;
+    });
+    
+    // Performance optimization: Throttle scroll events
+    function throttle(func, limit) {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      }
+    }
+    
+    // Add subtle parallax effect to gradient background
+    const gradientGlow = document.querySelector('.gradient-glow');
+    const throttledScroll = throttle(() => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      if (gradientGlow) {
+        gradientGlow.style.transform = `translateY(${rate}px)`;
+      }
+    }, 16);
+    
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    
+    // Preload critical images for better performance
+    const criticalImages = [
+      'https://www.transparenttextures.com/patterns/asfalt-light.png'
+    ];
+    
+    criticalImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+    
+    // Enhanced accessibility: Focus management
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+        cursor.style.display = 'none';
+      }
+    });
+    
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+      cursor.style.display = 'block';
+    });
+    
+
+  </script>
+  
+  <!-- Professional CSS for loaded state -->
+  <style>
+    .keyboard-navigation *:focus {
+      outline: 2px solid #06b6d4 !important;
+      outline-offset: 2px;
+    }
+    
+    body:not(.keyboard-navigation) *:focus {
+      outline: none;
+    }
+    
+    .loaded .slide-up {
+      animation-play-state: running !important;
+    }
+    
+    /* Enhanced responsive design */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+      }
+      
+      .section-padding {
+        padding: 3rem 0;
+      }
+      
+      .glass, .glass-strong {
+        margin: 0 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      nav .hidden {
+        display: none !important;
+      }
+    }
+    
+    /* Print styles for professional documents */
+    @media print {
+      .custom-cursor,
+      .gradient-glow,
+      .neon-glow {
+        display: none !important;
+      }
+      
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      
+      .glass,
+      .glass-strong {
+        background: white !important;
+        border: 1px solid #ccc !important;
+      }
+    }
+  </style>
+    <script src="https://www.navaura.in/chatui.js"></script>
+</body>
+</html>

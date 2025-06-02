@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Apps - NAVAURA ARCTIQ - Next-Gen Web Development Platform</title>
+  <meta name="description" content="Explore Navaura Arctiq's innovative applications - Vedi Plus AI researcher tool and Sayva AI nocode chatbot builder." />
+  <meta name="keywords" content="navaura apps, vedi plus ai, sayva ai, ai researcher, chatbot builder, nocode platform" />
+  <meta name="author" content="Navaura Arctiq" />
+  <meta property="og:title" content="Our Apps - NAVAURA ARCTIQ" />
+  <meta property="og:description" content="Discover our cutting-edge AI applications and platforms." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="tailwindcss.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://www.navaura.in/chatui.js"></script>
+  <style>
+/* Firefox fallback */
+@-moz-document url-prefix() {
+  .custom-cursor {
+    background: rgb(255, 255, 255);
+    mix-blend-mode: difference; 
+  }
+}
+
+/* ENHANCED MOBILE CURSOR DISABLE - Multiple Detection Methods */
+/* Method 1: Touch Device Detection */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 2: Screen Size Detection */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 3: Combined Touch and Small Screen */
+@media (max-width: 1024px) and (hover: none) {
+  .custom-cursor {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 4: Orientation Detection for Mobile */
+@media (orientation: portrait) and (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 5: Additional Touch Device Detection */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+
+    /* Enhanced Typography */
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    /* Professional Grunge Background */
+    body {
+      background: #0a0a0a url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+      cursor: none;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    
+    /* Enhanced Grid overlay */
+    .grid-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    /* Professional RGB Gradient */
+    .gradient-glow {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70vh;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 50% 120%, 
+        rgba(6, 182, 212, 0.15), 
+        rgba(168, 85, 247, 0.1), 
+        rgba(236, 72, 153, 0.08),
+        transparent 70%);
+      background-size: 600% 600%;
+      animation: professionalPulse 15s ease infinite;
+      mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%);
+      transition: position 0.3s ease;
+      z-index: 5;
+    }
+    
+    @keyframes professionalPulse {
+      0%, 100% { background-position: 50% 100%; opacity: 0.8; }
+      33% { background-position: 20% 80%; opacity: 0.6; }
+      66% { background-position: 80% 60%; opacity: 0.9; }
+    }
+    
+    /* Refined Custom Cursor */
+    .custom-cursor {
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      pointer-events: none;
+background-color: white;
+      mix-blend-mode: difference;
+      z-index: 99999999999999999999;
+      transition: transform 0.1s ease;
+    }
+    
+    /* Enhanced Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .glass-strong {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(25px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Professional Hover Effects */
+    .hover-lift {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(6, 182, 212, 0.15);
+    }
+    
+    /* Refined Neon Glow */
+    .neon-glow {
+      box-shadow: 
+        0 0 20px rgba(6, 182, 212, 0.3),
+        0 0 40px rgba(6, 182, 212, 0.2),
+        0 0 80px rgba(6, 182, 212, 0.1);
+      animation: professionalNeon 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes professionalNeon {
+      from { 
+        box-shadow: 
+          0 0 20px rgba(6, 182, 212, 0.3),
+          0 0 40px rgba(6, 182, 212, 0.2),
+          0 0 80px rgba(6, 182, 212, 0.1);
+      }
+      to { 
+        box-shadow: 
+          0 0 30px rgba(6, 182, 212, 0.5),
+          0 0 60px rgba(6, 182, 212, 0.3),
+          0 0 100px rgba(6, 182, 212, 0.15);
+      }
+    }
+    
+    /* Professional Animations */
+    .slide-up {
+      opacity: 0;
+      transform: translateY(60px);
+      animation: professionalSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+    
+    @keyframes professionalSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Enhanced Navigation */
+    .nav-blur {
+      backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(10, 10, 10, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    /* Professional Button Styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0891b2, #0e7490);
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    /* Refined Typography */
+    .hero-title {
+      background: linear-gradient(135deg, #ffffff, #e2e8f0, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+    
+    /* Professional Spacing */
+    .section-padding {
+      padding: 5rem 0;
+    }
+    
+    @media (min-width: 768px) {
+      .section-padding {
+        padding: 7rem 0;
+      }
+    }
+    
+    /* Mobile Menu Styles */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+    
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-color: #ffffff;
+      z-index: 6;
+    }
+
+    /* App Card Hover Effects */
+    .app-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s;
+    }
+    
+    .app-card:hover::before {
+      left: 100%;
+    }
+
+    /* Feature Tag Styles */
+    .feature-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(6, 182, 212, 0.2);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #67e8f9;
+      margin: 0.125rem;
+    }
+
+    /* Status Badge */
+    .status-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    }
+
+    .status-live {
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+    }
+
+    .status-beta {
+      background: rgba(251, 191, 36, 0.2);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      color: #fbbf24;
+    }
+  </style>
+  <style>        .hamburger {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger:hover {
+            opacity: 0.7;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .mobile-menu {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #00bcd4;
+        }</style>
+
+            <script>
+       // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (hamburger && mobileMenu) {
+                let isActive = false;
+                
+                hamburger.addEventListener('click', () => {
+                    isActive = !isActive;
+                    hamburger.classList.toggle('active', isActive);
+                    mobileMenu.classList.toggle('active', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = mobileMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        isActive = false;
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</head>
+
+<body class="relative text-white overflow-x-hidden antialiased">
+  
+  <!-- Enhanced Grid and Background -->
+  <div class="grid-bg absolute inset-0 z-0"></div>
+  
+  <!-- Professional Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="flex justify-between items-center px-6 py-4">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo Icon -->
+                <div class="logo-icon w-12 h-12 rounded-lg flex items-center justify-center">
+                    <img src="https://www.navaura.in/logow.png" alt="NAVAURA Logo">
+                </div>
+                <!-- Brand Text -->
+                <div class="text-2xl font-bold tracking-tight">
+                    <span class="text-white">NAVAURA</span>
+                    <span class="text-cyan-400 ml-1">arctiq</span>
+                </div>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <!-- Get Started Button -->
+                <button class="chatui btn-primary text-black px-6 py-2.5 rounded-full text-sm font-semibold">
+                    Chat with Us 24/7
+                </button>
+                
+                <!-- Hamburger Menu -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+
+
+       <!-- Desktop menu (hidden on mobile) -->
+        <div class="hidden md:flex md:items-center md:justify-center md:space-x-8 md:py-4">
+            <a href="#vedi-plus-ai" class="nav-link text-white text-lg font-medium py-2">vedi</a>
+            <a href="#sayva" class="nav-link text-white text-lg font-medium py-2">Sayva</a>
+            <a href="./about" class="nav-link text-white text-lg font-medium py-2">About</a>
+            <a href="./contact" class="nav-link text-white text-lg font-medium py-2">Contact</a>
+            <a href="./apps" class="nav-link text-white text-lg font-medium py-2">Apps</a>
+            <a href="./services" class="nav-link text-white text-lg font-medium py-2">Services</a>
+            <a href="./software-company-kolkata" class="nav-link text-white text-lg font-medium py-2">Software Company Kolkata</a>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu  md:hidden" id="mobile-menu">
+            <div class="px-7 py-6 space-y-4">
+                <a href="#vedi-plus-ai" class="nav-link block text-white text-lg font-medium py-2">vedi</a>
+                <a href="#sayva" class="nav-link block text-white text-lg font-medium py-2">Sayva</a>
+                <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
+                <a href="./contact" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
+                <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
+                <a href="./services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
+                <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-screen z-10 text-center px-6 pt-20">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="hero-title text-6xl sm:text-7xl lg:text-8xl font-black mb-8 slide-up" data-aos="fade-up">
+        Our<br>Apps<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-xl sm:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 text-gray-200 font-light leading-relaxed slide-up" style="animation-delay: 0.2s;" data-aos="fade-up" data-aos-delay="200">
+        Discover our <em class="text-cyan-400 not-italic font-medium">cutting-edge</em> AI applications<br>
+        designed to revolutionize your workflow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Professional Gradient Section -->
+  <div class="h-[70vh] gradient-glow z-5 -mt-32" style="position: relative;">
+    <div class="bottom-bar"></div>
+  </div>
+
+  <!-- Apps Showcase Section -->
+  <section class="relative z-10 section-padding px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl sm:text-6xl font-black mb-6 hero-title" data-aos="fade-up">
+          Innovation in Action
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light" data-aos="fade-up" data-aos-delay="100">
+          Experience the future of AI-powered tools with our flagship applications
+        </p>
+      </div>
+
+      <!-- Apps Grid -->
+      <div class="grid lg:grid-cols-2 gap-12 mb-20">
+        <!-- Vedi Plus AI -->
+        <div class="app-card glass-strong p-12 rounded-3xl hover-lift relative" data-aos="fade-up" id="vedi-plus-ai">
+          <div class="status-badge status-live">
+            <span class="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+            LIVE
+          </div>
+          
+          <div class="mb-8">
+            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl mb-6 flex items-center justify-center">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl font-black mb-4">
+              <span class="text-white">Vedi</span>
+              <span class="text-purple-400">Plus</span>
+
+            </h3>
+            <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+              Revolutionary AI-powered research assistant that transforms how you gather, analyze, and synthesize information from multiple sources.
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="text-lg font-bold mb-4 text-cyan-400">Key Features:</h4>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="feature-tag">Multi-Source Research</span>
+              <span class="feature-tag">Real-time Analysis</span>
+              <span class="feature-tag">Smart Summarization</span>
+              <span class="feature-tag">Citation Management</span>
+              <span class="feature-tag">Export Options</span>
+              <span class="feature-tag">Collaboration Tools</span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Perfect for researchers, students, journalists, and professionals who need comprehensive, accurate information quickly. Supports multiple languages and integrates seamlessly with your existing workflow.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://vedi.navaura.in" target="_blank" class="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-full text-center transition-all duration-300 hover:scale-105">
+              Launch App
+            </a>
+            <button class="flex-1 glass border-2 border-purple-400/30 hover:border-purple-400/60 text-purple-400 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:bg-purple-400/10">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Sayva AI -->
+        <div class="app-card glass-strong p-12 rounded-3xl hover-lift relative" data-aos="fade-up" data-aos-delay="200" id="sayva">
+          <div class="status-badge status-live">
+            <span class="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+            LIVE
+          </div>
+          
+          <div class="mb-8">
+            <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-6 flex items-center justify-center">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl font-black mb-4">
+              <span class="text-white">Sayva</span>
+              <span class="text-cyan-400">AI</span>
+                            <p class="text-cyan-400">(beta)</p>
+            </h3>
+            <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+              Next-generation no-code, no-node AI chatbot builder that empowers anyone to create sophisticated conversational AI without technical expertise.
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="text-lg font-bold mb-4 text-cyan-400">Key Features:</h4>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="feature-tag">Visual Builder</span>
+              <span class="feature-tag">No Coding Required</span>
+              <span class="feature-tag">Multi-Platform Deploy</span>
+              <span class="feature-tag">AI Training</span>
+              <span class="feature-tag">Analytics Dashboard</span>
+              <span class="feature-tag">Custom Integrations</span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Ideal for businesses, entrepreneurs, and organizations looking to enhance customer engagement through intelligent chatbots. Deploy across websites, social media, and messaging platforms instantly.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://sayva.navaura.in" target="_blank" class="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-center transition-all duration-300 hover:scale-105">
+              Launch App
+            </a>
+            <button class="flex-1 glass border-2 border-cyan-400/30 hover:border-cyan-400/60 text-cyan-400 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:bg-cyan-400/10">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming Soon Section -->
+      <div class="text-center mb-16">
+        <h3 class="text-3xl font-black mb-8 text-gray-400" data-aos="fade-up">
+          More Innovation Coming Soon
+        </h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass p-8 rounded-2xl opacity-60" data-aos="fade-up">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2 text-gray-300">AutoFlow AI</h4>
+            <p class="text-gray-500 text-sm">Workflow automation platform</p>
+          </div>
+          
+          <div class="glass p-8 rounded-2xl opacity-60" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2 text-gray-300">DataViz Pro</h4>
+            <p class="text-gray-500 text-sm">Advanced data visualization tool</p>
+          </div>
+          
+          <div class="glass p-8 rounded-2xl opacity-60" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2 text-gray-300">SmartDeploy</h4>
+            <p class="text-gray-500 text-sm">Intelligent deployment platform</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative z-10 section-padding px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="glass-strong p-16 rounded-3xl" data-aos="fade-up">
+        <h2 class="text-4xl sm:text-5xl font-black mb-6 hero-title">
+          Ready to Transform Your Workflow?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto font-light">
+          Join thousands of users who have already revolutionized their productivity with our AI-powered applications.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="https://vedi.navaura.in" target="_blank" class="btn-primary text-black font-bold px-8 py-4 rounded-full text-lg hover-lift">
+            Try Vedi Plus AI
+          </a>
+          <a href="https://sayva.navaura.in" target="_blank" class="glass border-2 border-cyan-400/30 hover:border-cyan-400/60 text-cyan-400 font-bold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:bg-cyan-400/10">
+            Try Sayva AI
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="relative z-10 py-16 px-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center space-x-4 mb-6">
+            <img src="https://www.navaura.in/logow.png" alt="Navaura Logo" class="w-10 h-10" />
+            <div class="text-2xl font-black">
+              <span class="text-white">NAVAURA<sup class="text-xs">™</sup></span>
+              <span class="text-cyan-400">arctiq</span>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-6 leading-relaxed">
+            Next-generation web development platform powered by advanced AI technology and innovative solutions.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-full flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.165.075.297-.085.402-.402 1.661-.402 1.661-.053.225-.172.271-.402.162-1.499-.69-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.749-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017-.001z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-6 text-white">Our Apps</h3>
+          <ul class="space-y-4">
+            <li><a href="https://vedi.navaura.in" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">Vedi Plus AI</a></li>
+            <li><a href="https://sayva.navaura.in" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">Sayva AI</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">AutoFlow AI <span class="text-xs bg-gray-700 px-2 py-1 rounded">Soon</span></a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">DataViz Pro <span class="text-xs bg-gray-700 px-2 py-1 rounded">Soon</span></a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-6 text-white">Platform</h3>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Features</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Pricing</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">API Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Integration Guide</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Support</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-6 text-white">Company</h3>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Press</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Contact</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+          © 2025 Navaura Arctiq. All rights reserved.
+        </p>
+        <div class="flex items-center space-x-6">
+          <a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out-sine',
+      once: true,
+      offset: 100
+    });
+
+    // Custom Cursor Logic
+    const cursor = document.querySelector('.custom-cursor');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+      const diffX = mouseX - cursorX;
+      const diffY = mouseY - cursorY;
+      
+      cursorX += diffX * 0.1;
+      cursorY += diffY * 0.1;
+      
+      cursor.style.left = cursorX - 40 + 'px';
+      cursor.style.top = cursorY - 40 + 'px';
+      
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileClose = document.querySelector('.mobile-close');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Enhanced scroll effects
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        nav.style.transform = 'translateY(-100%)';
+      } else {
+        nav.style.transform = 'translateY(0)';
+      }
+      
+      lastScrollY = currentScrollY;
+    });
+
+    // Parallax effect for gradient
+    const gradient = document.querySelector('.gradient-glow');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      gradient.style.transform = `translateY(${rate}px)`;
+    });
+
+    // Performance optimization - Throttle scroll events
+    let ticking = false;
+    function updateScrollEffects() {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.3;
+      
+      if (gradient) {
+        gradient.style.transform = `translateY(${rate}px)`;
+      }
+      
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollEffects);
+        ticking = true;
+      }
+    });
+
+ 
+
+    // Enhanced button interactions
+    const buttons = document.querySelectorAll('.btn-primary, .glass');
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add ripple effect styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.6);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+      }
+      
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
+      .animate-in {
+        animation: slideInUp 0.8s ease-out forwards;
+      }
+      
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

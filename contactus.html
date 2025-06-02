@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - NAVAURA ARCTIQ - Next-Gen Web Development Platform</title>
+  <meta name="description" content="Get in touch with Navaura Arctiq. Contact our team for support, partnerships, or inquiries about our web development platform." />
+  <meta name="keywords" content="contact navaura, web development support, platform help, get in touch" />
+  <meta name="author" content="Navaura Arctiq" />
+  <meta property="og:title" content="Contact Us - NAVAURA ARCTIQ" />
+  <meta property="og:description" content="Get in touch with the next-generation web development platform team." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="tailwindcss.js"></script>
+<link rel="stylesheet" href="basevaura.css">
+            <script>
+       // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (hamburger && mobileMenu) {
+                let isActive = false;
+                
+                hamburger.addEventListener('click', () => {
+                    isActive = !isActive;
+                    hamburger.classList.toggle('active', isActive);
+                    mobileMenu.classList.toggle('active', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = mobileMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        isActive = false;
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+  <script src="https://www.navaura.in/chatui.js"></script>
+</head>
+<body class="relative text-white overflow-x-hidden antialiased">
+  <!-- Enhanced Grid and Background -->
+  <div class="grid-bg absolute inset-0 z-0"></div>
+  
+  <!-- Professional Navigation -->
+  <!-- Professional Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="flex justify-between items-center px-6 py-4">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo Icon -->
+                <div class="logo-icon w-12 h-12 rounded-lg flex items-center justify-center">
+                    <img src="https://www.navaura.in/logow.png" alt="NAVAURA Logo">
+                </div>
+                <!-- Brand Text -->
+    <div class="text-2xl font-bold tracking-tight">
+        <span class="text-white">NAVAURA</span><span class="text-x=s font-normal text-gray-400 tracking-wider align-top">™</span><br>
+        <span class="text-cyan-400 ml-1">arctiq</span>
+    </div>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <!-- Get Started Button -->
+                <a href="./" class=" btn-primary text-black px-6 py-2.5 rounded-full text-sm font-semibold">
+                    Home
+                </a>
+                
+                <!-- Hamburger Menu -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#features" class="nav-link block text-white text-lg font-medium py-2">Features</a>
+                <a href="#pricing" class="nav-link block text-white text-lg font-medium py-2">Pricing</a>
+                <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
+                <a href="./contact" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
+                <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
+                <a href="./services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
+                <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-screen z-10 text-center px-6 pt-20">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="hero-title text-6xl sm:text-7xl lg:text-8xl font-black mb-8 slide-up">
+        Contact<br>Us<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-xl sm:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 text-gray-200 font-light leading-relaxed slide-up" style="animation-delay: 0.2s;">
+        Ready to transform your <em class="text-cyan-400 not-italic font-medium">development workflow</em>?<br>
+        Let's build something amazing together.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Professional Gradient Section -->
+  <div class="h-[70vh] gradient-glow z-5" style="position: relative; margin-bottom: 40px;">
+    <div class="bottom-bar" style="position: absolute;"></div>
+  </div>
+
+  <!-- Contact Information Section -->
+  <section class="relative z-10 section-padding px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-3 gap-8 mb-16">
+        <div class="glass p-10 rounded-3xl hover-lift text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-cyan-400">Email Us</h3>
+          <p class="text-gray-300 mb-4">Get in touch via email</p>
+          <a href="mailto:namaskar@navaura.in" class="text-cyan-400 hover:text-cyan-300 font-medium">namaskar@navaura.in</a>
+        </div>
+        
+        <div class="glass p-10 rounded-3xl hover-lift text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-purple-400">Call Us</h3>
+          <p class="text-gray-300 mb-4">Speak with our team</p>
+          <a href="tel:+919073888611" class="text-purple-400 hover:text-purple-300 font-medium">+91 90738 88611</a>
+          <a href="tel:+918240591128" class="text-purple-400 hover:text-purple-300 font-medium">+91 82405 91128</a>
+        </div>
+        
+        <div class="glass p-10 rounded-3xl hover-lift text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-green-400">Visit Us</h3>
+          <p class="text-gray-300 mb-4">Our headquarters</p>
+          <p class="text-green-400 font-medium">Kolkata, WestBengal, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="relative z-10 section-padding px-6">
+    <div class="max-w-5xl mx-auto">
+      <div id="form-container" class="glass-strong p-12 rounded-3xl">
+        <div class="text-center mb-12">
+          <h2 class="text-5xl sm:text-6xl font-black mb-6 hero-title">
+            Get In Touch
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light">
+            Have a question, need support, or want to discuss a partnership? We'd love to hear from you.
+          </p>
+        </div>
+        
+        <form id="contact-form" class="space-y-8">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-3 text-gray-200">Full Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="form-input w-full px-6 py-4 rounded-xl text-white placeholder-gray-400"
+                placeholder="Enter your full name"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-3 text-gray-200">Email Address *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="form-input w-full px-6 py-4 rounded-xl text-white placeholder-gray-400"
+                placeholder="Enter your email address"
+              />
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <label for="mobile" class="block text-sm font-semibold mb-3 text-gray-200">Mobile Number *</label>
+              <input 
+                type="tel" 
+                id="mobile" 
+                name="mobile" 
+                required 
+                pattern="[0-9]{10}"
+                class="form-input w-full px-6 py-4 rounded-xl text-white placeholder-gray-400"
+                placeholder="Enter 10-digit mobile number"
+              />
+            </div>
+            <div>
+              <label for="reason" class="block text-sm font-semibold mb-3 text-gray-200">Reason for Contact *</label>
+              <select 
+                id="reason" 
+                name="reason" 
+                required 
+                class="form-input w-full px-6 py-4 rounded-xl text-gray-400"
+              >
+                <option value="">Select a reason</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Enterprise Sales">Enterprise Sales</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-semibold mb-3 text-gray-200">Message *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              class="form-input form-textarea w-full px-6 py-4 rounded-xl text-white placeholder-gray-400"
+              placeholder="Tell us more about your inquiry..."
+            ></textarea>
+          </div>
+          
+          <div class="flex items-center space-x-3">
+            <input 
+              type="checkbox" 
+              id="newsletter" 
+              name="newsletter" 
+              checked
+              class="w-5 h-5 text-cyan-600 border-gray-300 rounded focus:ring-cyan-500"
+            />
+            <label for="newsletter" class="text-gray-300 text-sm">
+              Subscribe to our newsletter for updates and platform news
+            </label>
+          </div>
+          
+          <div class="text-center pt-6">
+            <button 
+              type="submit" 
+              class="bg-white text-black font-semibold px-12 py-5 rounded-full text-lg hover:bg-gray-100 transition-all hover-lift"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="relative z-10 section-padding px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl sm:text-6xl font-black mb-6 hero-title">
+          Quick Answers
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light">
+          Common questions about our platform and services
+        </p>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="glass p-8 rounded-2xl hover-lift">
+          <h3 class="text-xl font-bold mb-4 text-cyan-400">How quickly can I get started?</h3>
+          <p class="text-gray-300">You can deploy your first application in under 2 minutes. Our platform is designed for instant deployment with zero configuration required.</p>
+        </div>
+        
+        <div class="glass p-8 rounded-2xl hover-lift">
+          <h3 class="text-xl font-bold mb-4 text-purple-400">What support options are available?</h3>
+          <p class="text-gray-300">We offer 24/7 technical support via email, AI chat, and phone. Enterprise customers get dedicated support representatives and priority response times.</p>
+        </div>
+        
+        <div class="glass p-8 rounded-2xl hover-lift">
+          <h3 class="text-xl font-bold mb-4 text-pink-400">Do you offer custom enterprise solutions?</h3>
+          <p class="text-gray-300">Yes, we provide white-label solutions, custom integrations, and dedicated infrastructure for enterprise clients. Contact our sales team to discuss your requirements.</p>
+        </div>
+        
+        <div class="glass p-8 rounded-2xl hover-lift">
+          <h3 class="text-xl font-bold mb-4 text-green-400">What's your uptime guarantee?</h3>
+          <p class="text-gray-300">We guarantee 99.99% uptime with our global edge network. Our infrastructure is designed for maximum reliability with automatic failover and redundancy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="relative z-10 py-16 px-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-5 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <div class="text-4xl font-black mb-6">
+            <span class="text-white">Navaura</span>
+            <span class="text-cyan-400">Arctiq</span>
+            <span class="text-pink-400">(opc) private limited</span>
+          </div>
+          <p class="text-gray-400 text-lg mb-6 max-w-md leading-relaxed">
+            Empowering businesses worldwide with cutting-edge deployment solutions and unparalleled working infrastructure.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76h-.03c-1.22 0-2-.83-2-1.87 0-1.06.8-1.87 2.05-1.87 1.24 0 2 .8 2.02 1.87 0 1.04-.78 1.87-2.05 1.87zM20.34 20.1h-3.63v-5.8c0-1.45-.52-2.45-1.83-2.45-1 0-1.6.67-1.87 1.32-.1.23-.11.55-.11.88v6.05H9.28s.05-9.82 0-10.84h3.63v1.54a3.6 3.6 0 0 1 3.26-1.8c2.39 0 4.18 1.56 4.18 4.89v6.21z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.098.118.112.222.082.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.162-1.5 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.098.118.112.222.082.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.162-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.63-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.017.001z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6 text-white">Platform</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Features</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Pricing</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">API Reference</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6 text-white">Company</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Press</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Partners</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6 text-white">Support</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Help Center</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Community</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Status</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 flex flex-col lg:flex-row justify-between items-center">
+        <div class="text-gray-400 text-sm mb-4 lg:mb-0">
+          © 2025 Navaura Arctiq (OPC) Private Limited. All rights reserved.
+        </div>
+        <div class="flex space-x-8 text-sm">
+          <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Enhanced JavaScript -->
+  <script>
+    // Professional Custom Cursor
+    const cursor = document.querySelector('.custom-cursor');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.1;
+      cursorY += (mouseY - cursorY) * 0.1;
+      cursor.style.left = cursorX - 40 + 'px';
+      cursor.style.top = cursorY - 40 + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+
+
+    // Enhanced Form Validation and Animation
+    const formInputs = document.querySelectorAll('.form-input');
+    
+    formInputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      
+      input.addEventListener('blur', function() {
+        if (!this.value) {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+      
+      // Real-time validation
+      input.addEventListener('input', function() {
+        validateField(this);
+      });
+    });
+
+    function validateField(field) {
+      const value = field.value.trim();
+      
+      // Remove existing error states
+      field.classList.remove('border-red-500', 'border-green-500');
+      
+      switch(field.type) {
+        case 'email':
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (value && emailRegex.test(value)) {
+            field.classList.add('border-green-500');
+          } else if (value) {
+            field.classList.add('border-red-500');
+          }
+          break;
+          
+        case 'tel':
+          const phoneRegex = /^\d{10}$/;
+          if (value && phoneRegex.test(value)) {
+            field.classList.add('border-green-500');
+          } else if (value) {
+            field.classList.add('border-red-500');
+          }
+          break;
+          
+        default:
+          if (value && value.length >= 2) {
+            field.classList.add('border-green-500');
+          } else if (value) {
+            field.classList.add('border-red-500');
+          }
+      }
+    }
+
+    // Contact Form Submission Handler
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      
+      // Disable the submit button to prevent double submission
+      const submitBtn = this.querySelector("button[type='submit']");
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+      
+      // Validate mobile number (10 digits)
+      const mobileInput = this.mobile;
+      if (!/^\d{10}$/.test(mobileInput.value)) {
+        alert('Please enter a valid 10-digit mobile number');
+        mobileInput.focus();
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Message";
+        return;
+      }
+      
+      const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        mobile: this.mobile.value,
+        reason: this.reason.value,
+        message: this.message.value,
+        newsletter: this.newsletter ? this.newsletter.checked.toString() : "true"
+      };
+      
+      // Immediately show the thank-you message
+      document.getElementById("form-container").innerHTML = `
+        <div class="text-center py-16" data-aos="fade-up">
+          <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-4xl font-bold mb-4 text-green-400">Thank You!</h3>
+          <p class="text-xl text-gray-300 mb-4">We appreciate you contacting us. We'll get back to you soon!</p>
+          <p class="text-lg text-gray-400 mt-4">Your inquiry about "<strong class="text-cyan-400">${formData.reason}</strong>" has been received.</p>
+          ${formData.newsletter === "true" ? `<p class="text-sm text-blue-400 mt-4 bg-blue-900/20 inline-block px-4 py-2 rounded-full">✓ You've been subscribed to our newsletter!</p>` : ''}
+          <div class="mt-8">
+            <button onclick="location.reload()" class="bg-cyan-500 text-black font-semibold px-8 py-3 rounded-full hover:bg-cyan-400 transition-all">
+              Send Another Message
+            </button>
+          </div>
+        </div>
+      `;
+      
+      // Perform the request in the background
+      try {
+        await fetch('https://server1001.navaura.in/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+      } catch (error) {
+        console.error("Form submission failed:", error);
+      }
+    });
+
+
+    // Enhanced Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
+    }
+
+    // Professional FAQ Accordion (if needed)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      
+      if (question && answer) {
+        question.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          
+          // Close all other FAQ items
+          faqItems.forEach(otherItem => {
+            otherItem.classList.remove('open');
+          });
+          
+          // Toggle current item
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      }
+    });
+
+    // Performance Optimization
+    let ticking = false;
+    
+    function updateOnScroll() {
+      // Throttled scroll events for better performance
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Add scroll-based animations here
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', updateOnScroll, { passive: true });
+  </script>
+</body>
+</html>

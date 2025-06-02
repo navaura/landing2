@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navaura Arctiq - Sarvesham Krute Bhabishyam</title>
+  <meta name="description" content="Discover AI-driven software solutions with Navaura Arctiq, Kolkata's leading tech company empowering businesses through innovation." />
+  <meta name="keywords" content="AI software company Kolkata, custom software development India, enterprise software solutions, top IT company Kolkata, artificial intelligence services, machine learning solutions, software development firm Kolkata, AI development India, tech company Kolkata, software solutions provider India" />
+  <meta name="author" content="Navaura Arctiq (opc) Pvt. Ltd." />
+  <meta property="og:title" content="Navaura Arctiq - Sarvesham Krute Bhabishyam" />
+  <meta property="og:description" content="Your complete platform for modern web App development. Work Automating, Robust Scaling, build in India." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="tailwindcss.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+ 
+<style>/* Enhanced Typography */
+/* Enhanced Typography */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Professional Grunge Background */
+body {
+  background: #0a0a0a url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+  cursor: none;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Enhanced Grid overlay */
+.grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Professional RGB Gradient */
+.gradient-glow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70vh;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 120%, 
+    rgba(6, 182, 212, 0.15), 
+    rgba(168, 85, 247, 0.1), 
+    rgba(236, 72, 153, 0.08),
+    transparent 70%);
+  background-size: 600% 600%;
+  animation: professionalPulse 15s ease infinite;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%);
+  transition: position 0.3s ease;
+  z-index: 5;
+}
+
+@keyframes professionalPulse {
+  0%, 100% { background-position: 50% 100%; opacity: 0.8; }
+  33% { background-position: 20% 80%; opacity: 0.6; }
+  66% { background-position: 80% 60%; opacity: 0.9; }
+}
+
+/* Default style for Chrome, Safari, Edge (supporting backdrop-filter well) */
+.custom-cursor {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgb(255, 255, 255); /* subtle fallback color */
+  mix-blend-mode: difference;
+  z-index: 9999999999;
+
+  transition: transform 0.1s ease;
+}
+
+/* Firefox fallback */
+@-moz-document url-prefix() {
+  .custom-cursor {
+    background: rgb(255, 255, 255);
+    mix-blend-mode: difference; 
+  }
+}
+
+/* ENHANCED MOBILE CURSOR DISABLE - Multiple Detection Methods */
+/* Method 1: Touch Device Detection */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 2: Screen Size Detection */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+  
+}
+
+/* Method 3: Combined Touch and Small Screen */
+@media (max-width: 1024px) and (hover: none) {
+  .custom-cursor {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 4: Orientation Detection for Mobile */
+@media (orientation: portrait) and (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Method 5: Additional Touch Device Detection */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Enhanced Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Professional Hover Effects */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(6, 182, 212, 0.15);
+}
+
+/* Mobile Hover Fix */
+@media (hover: none) {
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Refined Neon Glow */
+.neon-glow {
+  box-shadow: 
+    0 0 20px rgba(6, 182, 212, 0.3),
+    0 0 40px rgba(6, 182, 212, 0.2),
+    0 0 80px rgba(6, 182, 212, 0.1);
+  animation: professionalNeon 3s ease-in-out infinite alternate;
+}
+
+@keyframes professionalNeon {
+  from { 
+    box-shadow: 
+      0 0 20px rgba(6, 182, 212, 0.3),
+      0 0 40px rgba(6, 182, 212, 0.2),
+      0 0 80px rgba(6, 182, 212, 0.1);
+  }
+  to { 
+    box-shadow: 
+      0 0 30px rgba(6, 182, 212, 0.5),
+      0 0 60px rgba(6, 182, 212, 0.3),
+      0 0 100px rgba(6, 182, 212, 0.15);
+  }
+}
+
+/* Professional Animations */
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: professionalSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes professionalSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Navigation */
+.nav-blur {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(10, 10, 10, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile Navigation Fixes */
+@media (max-width: 768px) {
+  .nav-blur {
+    padding: 0.5rem 1rem;
+  }
+  
+  nav .flex {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  nav .text-3xl {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+
+  nav .hidden.md\\:flex {
+    display: none !important;
+  }
+
+  nav button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Professional Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Mobile Button Fixes */
+@media (max-width: 768px) {
+  .btn-primary:hover {
+    transform: none;
+  }
+}
+
+/* Refined Typography */
+.hero-title {
+  background: linear-gradient(135deg, #ffffff, #e2e8f0, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+/* Mobile Typography Fixes */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+    margin-bottom: 1rem !important;
+  }
+
+  .text-6xl,
+  .sm\\:text-7xl,
+  .lg\\:text-8xl,
+  .xl\\:text-9xl {
+    font-size: 2.5rem !important;
+  }
+
+  .text-xl.sm\\:text-2xl.lg\\:text-3xl {
+    font-size: 1.1rem !important;
+    line-height: 1.4;
+    margin-bottom: 2rem !important;
+  }
+
+  .text-5xl.sm\\:text-6xl {
+    font-size: 1.8rem !important;
+  }
+
+  .text-4xl.sm\\:text-5xl {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Professional Spacing */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (min-width: 800px) {
+  .section-padding {
+    padding: 7rem 0;
+  }
+  .carousel h2{
+    font-size: 0.8rem!important;
+  }
+}
+
+/* Mobile Spacing Fixes */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 2rem 0 !important;
+  }
+
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .py-4 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 2rem !important;
+  }
+
+  .mb-16 {
+    margin-bottom: 2rem !important;
+  }
+
+  .mb-20 {
+    margin-bottom: 2rem !important;
+  }
+
+  .pt-20 {
+    padding-top: 5rem !important;
+  }
+}
+
+/* Loading Animation */
+.loading-dot {
+  animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Professional Card Styles */
+.feature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.8), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Mobile Feature Cards */
+@media (max-width: 768px) {
+  .grid.lg\\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .feature-card {
+    padding: 1.5rem !important;
+  }
+
+  .feature-card .w-20.h-20 {
+    width: 3rem !important;
+    height: 3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .feature-card .text-3xl {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .feature-card .text-lg {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Carousel Styles */
+.carousel {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.slides {
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slide {
+  min-width: 150px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white!important;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.slide img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Mobile Carousel Fixes */
+@media (max-width: 768px) {
+  .carousel {
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .carousel h2 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .slide {
+    min-width: 80px !important;
+    margin-right: 15px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .slide img {
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: #ffffff;
+  z-index: 6;
+}
+
+.comparison-item {
+  margin-bottom: 4rem;
+  pointer-events: none;
+}
+
+.comparison-item:hover {
+  transform: scale(0)!important;
+  pointer-events: none;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+/* Mobile Stats Grid */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .stat-card {
+    padding: 1rem !important;
+  }
+
+  .stat-number {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .grid.grid-cols-2.lg\\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .text-5xl.lg\\:text-6xl {
+    font-size: 1.8rem !important;
+  }
+
+  .text-gray-300.text-lg {
+    font-size: 0.8rem !important;
+  }
+}
+
+.comparison-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  padding: 2rem;
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.feature-comparison {
+  padding: 2rem;
+}
+
+.comparison-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-item:last-child {
+  border-bottom: none;
+}
+
+.feature-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.vs-badge {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navaura-badge {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.others-badge {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1));
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  .comparison-container {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  .chart-container {
+    height: 200px !important;
+    padding: 1rem !important;
+  }
+
+  .chart-title {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .feature-comparison {
+    padding: 1rem !important;
+  }
+
+  .comparison-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  .feature-name {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .vs-badge {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .navaura-badge,
+  .others-badge {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.7rem !important;
+    white-space: nowrap;
+  }
+
+  .highlight-box {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Hero Section Mobile Fixes */
+  .min-h-screen {
+    min-height: 70vh !important;
+  }
+
+  .flex.flex-col.sm\\:flex-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .btn-primary,
+  .glass {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Glass Container Mobile Fixes */
+  .glass,
+  .glass-strong {
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .p-10 {
+    padding: 1.5rem !important;
+  }
+
+  .p-12,
+  .lg\\:p-16 {
+    padding: 1.5rem !important;
+  }
+
+  .p-16 {
+    padding: 1.5rem !important;
+  }
+
+  /* Footer Mobile Fixes */
+  .grid.lg\\:grid-cols-5 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .lg\\:col-span-2 {
+    grid-column: span 1 !important;
+  }
+
+  .text-4xl {
+    font-size: 1.5rem !important;
+  }
+
+  .flex.flex-col.md\\:flex-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+
+  .text-sm {
+    font-size: 0.75rem !important;
+  }
+
+  /* Additional Mobile Container Fixes */
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+  }
+
+  .rounded-3xl {
+    border-radius: 1rem !important;
+  }
+
+  .rounded-2xl {
+    border-radius: 0.75rem !important;
+  }
+
+  /* Ensure no horizontal overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* Mobile Text Adjustments */
+  .text-2xl {
+    font-size: 1.2rem !important;
+  }
+
+  .leading-relaxed {
+    line-height: 1.4 !important;
+  }
+
+  /* Mobile Gradient Background Fix */
+  .gradient-glow {
+    height: 40vh !important;
+  }
+}
+        .hamburger {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger:hover {
+            opacity: 0.7;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .mobile-menu {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #00bcd4;
+        }
+</style>
+    <script>
+       // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (hamburger && mobileMenu) {
+                let isActive = false;
+                
+                hamburger.addEventListener('click', () => {
+                    isActive = !isActive;
+                    hamburger.classList.toggle('active', isActive);
+                    mobileMenu.classList.toggle('active', isActive);
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = mobileMenu.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        isActive = false;
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body class="relative text-white overflow-x-hidden antialiased">
+  <!-- Enhanced Grid and Background -->
+  <div class="grid-bg absolute inset-0 z-0"></div>
+  
+  <!-- Professional Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="flex justify-between items-center px-6 py-4">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo Icon -->
+                <div class="logo-icon w-12 h-12 rounded-lg flex items-center justify-center">
+                    <img src="https://www.navaura.in/logow.png" alt="NAVAURA Logo">
+                </div>
+                <!-- Brand Text -->
+                <div class="text-2xl font-bold tracking-tight">
+                    <span class="text-white">NAVAURA</span>
+                    <span class="text-cyan-400 ml-1">arctiq</span>
+                </div>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <!-- Get Started Button -->
+                <button class="chatui btn-primary text-black px-6 py-2.5 rounded-full text-sm font-semibold">
+                    Chat with Us 24/7
+                </button>
+                
+                <!-- Hamburger Menu -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+
+       <!-- Desktop menu (hidden on mobile) -->
+        <div class="hidden md:flex md:items-center md:justify-center md:space-x-8 md:py-4">
+            <a href="#features" class="nav-link text-white text-lg font-medium py-2">Features</a>
+            <a href="#pricing" class="nav-link text-white text-lg font-medium py-2">Pricing</a>
+            <a href="./about" class="nav-link text-white text-lg font-medium py-2">About</a>
+            <a href="./contact" class="nav-link text-white text-lg font-medium py-2">Contact</a>
+            <a href="./apps" class="nav-link text-white text-lg font-medium py-2">Apps</a>
+            <a href="./services" class="nav-link text-white text-lg font-medium py-2">Services</a>
+            <a href="./software-company-kolkata" class="nav-link text-white text-lg font-medium py-2">Software Company Kolkata</a>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu  md:hidden" id="mobile-menu">
+            <div class="px-7 py-6 space-y-4">
+                <a href="#features" class="nav-link block text-white text-lg font-medium py-2">Features</a>
+                <a href="#pricing" class="nav-link block text-white text-lg font-medium py-2">Pricing</a>
+                <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
+                <a href="./contact" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
+                <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
+                <a href="./services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
+                <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
+            </div>
+        </div>
+    </nav>
+    
+
+<div id="chatbot"></div>
+
+  <!-- Enhanced Hero Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-screen z-10 text-center px-6 pt-20" >
+    <div class="max-w-6xl mx-auto">
+      <h1 class="hero-title text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black mb-8 slide-up">
+        NAVAURA™<br>ARCTIQ<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-xl sm:text-2xl lg:text-3xl max-w-4xl mx-auto mb-12 text-gray-200 font-light leading-relaxed slide-up" style="animation-delay: 0.2s;">
+        The complete platform for <em class="text-cyan-400 not-italic font-medium">modern web development</em>.<br>
+        Deploy faster, scale smarter, build bolder.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 slide-up" style="animation-delay: 0.4s;">
+        <a href="./apps" class="bg-white text-black font-semibold px-10 py-4 rounded-full text-lg hover:bg-gray-100 transition-all hover-lift" aria-label="Start deploying with Bold Professional">
+          Our Apps
+        </a>
+        <button class="chatui glass font-semibold px-10 py-4 rounded-full text-lg hover:bg-white hover:bg-opacity-10 transition-all hover-lift" aria-label="Schedule a demo of Bold Professional">
+          Chat with Us 24/7
+        </button>
+
+      </div>
+      <div class="flex justify-center items-center space-x-4 slide-up" style="animation-delay: 0.6s;">
+        <div class="w-3 h-3 bg-orange-400 rounded-full loading-dot"></div>
+        <div class="w-3 h-3 bg-white rounded-full loading-dot" style="animation-delay: 0.5s;"></div>
+        <div class="w-3 h-3 bg-blue-400 rounded-full loading-dot" style="animation-delay: 1s;"></div>
+        <div class="w-3 h-3 bg-green-400 rounded-full loading-dot" style="animation-delay: 1.5s;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Gradient Section -->
+<div class="h-[70vh] gradient-glow z-5" style="position: relative; margin-bottom: 40px;">
+    <div class="bottom-bar" style="position: absolute;"></div>
+  </div>
+  <!-- Enhanced Features Section -->
+<section id="features" class="relative z-10 section-padding px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="text-5xl sm:text-6xl font-black mb-6 hero-title">
+        What we're doing<br>that others are missing
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light">
+        Experience the next generation of Automation and AI tools designed for modern businesses and ambitious founders.
+      </p>
+    </div>
+    
+    <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+      <div class="glass feature-card p-10 rounded-3xl hover-lift group">
+        <div class="w-20 h-20 bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-600 rounded-2xl mb-8 flex items-center justify-center">
+<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+</svg>
+        </div>
+        <h3 class="text-3xl font-bold mb-6 group-hover:text-cyan-400 transition-colors">Lightning Development</h3>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Develop your applications in just a few days with our expert team delivering unmatched performance.
+        </p>
+      </div>
+      
+      <div class="glass feature-card p-10 rounded-3xl hover-lift group">
+        <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 rounded-2xl mb-8 flex items-center justify-center">
+<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm2 4a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm4 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zm-6 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+</svg>
+        </div>
+        <h3 class="text-3xl font-bold mb-6 group-hover:text-cyan-400 transition-colors">Robust Scaling</h3>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Robust scaling solutions that adapt to your needs, ensuring optimal performance at any load—whether you choose colocation or remote servers.
+        </p>
+      </div>
+      
+      <div class="glass feature-card p-10 rounded-3xl hover-lift group">
+        <div class="w-20 h-20 bg-gradient-to-br from-green-500 via-teal-600 to-cyan-600 rounded-2xl mb-8 flex items-center justify-center">
+        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+        </svg>
+        </div>
+        <h3 class="text-3xl font-bold mb-6 group-hover:text-cyan-400 transition-colors">Zero Configuration</h3>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          No complex setup required. Contact us, tell us your needs, and launch your app hassle-free.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Enhanced Stats Section -->
+<section class="relative z-10 section-padding px-6">
+ <div class="max-w-6xl mx-auto">
+<div class="glass-strong p-12 lg:p-16 rounded-3xl text-center">
+<h2 class="text-4xl sm:text-5xl font-bold mb-4">Why Choose Navaura Arctiq Over Others?</h2>
+<p class="text-xl text-gray-300 mb-16 font-light">Experience the difference that sets us apart from the competition</p>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="group">
+<div class="text-5xl lg:text-6xl font-black text-cyan-400 mb-4 group-hover:scale-110 transition-transform">3x</div>
+<div class="text-gray-300 text-lg font-medium">Faster Development</div>
+</div>
+<div class="group">
+<div class="text-5xl lg:text-6xl font-black text-pink-400 mb-4 group-hover:scale-110 transition-transform">83%</div>
+<div class="text-gray-300 text-lg font-medium">Lower Costs</div>
+</div>
+<div class="group">
+<div class="text-5xl lg:text-6xl font-black text-green-400 mb-4 group-hover:scale-110 transition-transform">Trust None</div>
+<div class="text-gray-300 text-lg font-medium">Policy</div>
+</div>
+<div class="group">
+<div class="text-5xl lg:text-6xl font-black text-purple-400 mb-4 group-hover:scale-110 transition-transform">AI </div>
+<div class="text-gray-300 text-lg font-medium">Powered automation</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+    <div class="carousel" id="technologies">
+        <h2 class="carousel-heading">Technologies We Work With</h2>
+        <div class="slides" >
+            <!-- First Loop -->
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
+                Python
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" style="filter: invert(1) brightness(2);" loading="lazy">
+                Flask
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" loading="lazy ">
+                FastAPI
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" alt="Flask-SQLAlchemy" loading="lazy">
+                Flask-SQLAlchemy
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" loading="lazy">
+                SQLite
+            </div>
+
+            <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1024px-Scikit_learn_logo_small.svg.png" alt="scikit-learn" loading="lazy">
+                scikit-learn
+            </div>
+            <div class="slide">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" loading="lazy">
+                Hugging Face
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="Torch" loading="lazy">
+                Torch
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
+                HTML
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
+                CSS
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                JavaScript
+            </div>
+            <div class="slide">
+                <img src="https://jinja.palletsprojects.com/en/stable/_static/jinja-logo-sidebar.png" alt="Jinja2" loading="lazy">
+                Jinja2
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
+                Python
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" style="filter: invert(1) brightness(2);" loading="lazy">
+                Flask
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" loading="lazy">
+                FastAPI
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" alt="Flask-SQLAlchemy" loading="lazy">
+                Flask-SQLAlchemy
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" loading="lazy">
+                SQLite
+            </div>
+            <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1024px-Scikit_learn_logo_small.svg.png" alt="scikit-learn" loading="lazy">
+                scikit-learn
+            </div>
+            <div class="slide">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" loading="lazy">
+                Hugging Face
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="Torch" loading="lazy">
+                Torch
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
+                HTML
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
+                CSS
+            </div>
+            <div class="slide">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                JavaScript
+            </div>
+            <div class="slide">
+                <img src="https://jinja.palletsprojects.com/en/stable/_static/jinja-logo-sidebar.png" alt="Jinja2" loading="lazy">
+                Jinja2
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="relative z-10 section-padding px-6 comparison-item">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-6 gradient-text-cyan">Why Choose Navaura?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    See how Navaura revolutionizes web development with custom solutions, modern technology, and lightning-fast delivery at unbeatable prices.
+                </p>
+            </div>
+
+            <!-- Key Stats -->
+            <div class="stats-grid mb-12">
+                <div class="glass-strong rounded-2xl stat-card hover-lift">
+                    <div class="stat-number gradient-text-cyan">100%</div>
+                    <div class="stat-label">Custom Built Apps</div>
+                    <div class="text-sm text-gray-400">Zero pre-made templates</div>
+                </div>
+                <div class="glass-strong rounded-2xl stat-card hover-lift">
+                    <div class="stat-number" style="background: linear-gradient(135deg, #10b981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">90%</div>
+                    <div class="stat-label">Cost Reduction</div>
+                    <div class="text-sm text-gray-400">Starting from ₹50K vs ₹3L+</div>
+                </div>
+                <div class="glass-strong rounded-2xl stat-card hover-lift">
+                    <div class="stat-number" style="background: linear-gradient(135deg, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">24</div>
+                    <div class="stat-label">Hours Delivery</div>
+                    <div class="text-sm text-gray-400">Fastest prototype delivery</div>
+                </div>
+            </div>
+
+            <!-- Main Comparison Section -->
+            <div class="glass-strong rounded-3xl p-8 hover-lift">
+                <div class="comparison-container">
+                    <!-- Cost Comparison Chart -->
+                    <div class="glass-strong rounded-2xl chart-container">
+                        <h3 class="chart-title gradient-text-cyan">Cost Comparison</h3>
+                        <canvas id="costChart"></canvas>
+                    </div>
+
+                    <!-- Timeline Comparison Chart -->
+                    <div class="glass-strong rounded-2xl chart-container">
+                        <h3 class="chart-title" style="background: linear-gradient(135deg, #f59e0b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Delivery Timeline</h3>
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Feature Comparison -->
+                <div class="glass-strong rounded-2xl feature-comparison mt-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text-cyan">Feature Comparison</h3>
+                    
+                    <div class="comparison-item">
+                        <div class="feature-name">App Development Approach</div>
+                        <div class="vs-badge">
+                            <div class="navaura-badge">Custom Crafted</div>
+                            <div class="others-badge">Pre-made Templates</div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="feature-name">Technology Stack</div>
+                        <div class="vs-badge">
+                            <div class="navaura-badge">Python + Jinja2 + Modern Stack</div>
+                            <div class="others-badge">PHP + Legacy Technologies</div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="feature-name">Starting Price</div>
+                        <div class="vs-badge">
+                            <div class="navaura-badge">₹30,000</div>
+                            <div class="others-badge">₹3,00,000+</div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="feature-name">First Prototype</div>
+                        <div class="vs-badge">
+                            <div class="navaura-badge pulse">24-120 Hours</div>
+                            <div class="others-badge">2-4 Weeks</div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="feature-name">Customization Level</div>
+                        <div class="vs-badge">
+                            <div class="navaura-badge">100% Tailored</div>
+                            <div class="others-badge">Limited Templates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Enhanced CTA Section -->
+  <section class="relative z-10 section-padding px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="glass-strong p-16 rounded-3xl text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div class="relative z-10">
+          <h2 class="text-5xl sm:text-6xl font-black mb-8 hero-title">
+            Ready to Go Bold?
+          </h2>
+          <p class="text-2xl mb-12 text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
+            Join thousands of developers who've already transformed their deployment workflow. Start building the future today.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <button class="bg-white text-black font-semibold px-12 py-5 rounded-full text-lg hover:bg-gray-100 transition-all hover-lift" aria-label="Start building with Bold Professional">
+              Start Building Now
+            </button>
+            <button class="glass font-semibold px-12 py-5 rounded-full text-lg hover:bg-white hover:bg-opacity-10 transition-all hover-lift" aria-label="Schedule consultation with sales team">
+              Schedule Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="relative z-10 py-16 px-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-5 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <div class="text-4xl font-black mb-6">
+            <span class="text-white">Navaura</span>
+            <span class="text-cyan-400">Arctiq</span>
+            <span class="text-pink-400">(opc) private limited</span>
+          </div>
+          <p class="text-gray-400 text-lg mb-6 max-w-md leading-relaxed">
+            Empowering developers worldwide with cutting-edge deployment solutions and unparalleled performance infrastructure.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Follow us on Twitter">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Connect on LinkedIn">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Visit our GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+
+        
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-white">Company</h4>
+          <ul class="space-y-4 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Learn about our company">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Read our blog">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="View career opportunities">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Contact our team">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Press and media">Press Kit</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-6 text-white">Support</h4>
+          <ul class="space-y-4 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Visit help center">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Join community forum">Community</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Learn about security">Security</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="Read privacy policy">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors" aria-label="View terms of service">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+          &copy; 2025 Navaura Arctiq (opc) private limited. All rights reserved. Built with passion for developers worldwide.
+        </p>
+        <div class="flex items-center space-x-6 text-sm text-gray-400">
+          <span> Created with Navaura</span>
+          <span>•</span>
+          <span> cheap but futuristic</span>
+          <span>•</span>
+          <span>made in India</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enhanced Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+
+  <!-- Professional JavaScript -->
+  <script>
+    // Enhanced cursor tracking with smooth animation
+    const cursor = document.getElementById('cursor');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    
+    // Smooth cursor animation with requestAnimationFrame
+    function animateCursor() {
+      const speed = 0.15;
+      cursorX += (mouseX - cursorX) * speed;
+      cursorY += (mouseY - cursorY) * speed;
+      
+      cursor.style.left = `${cursorX - 40}px`;
+      cursor.style.top = `${cursorY - 40}px`;
+      
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+    
+    // Enhanced smooth scrolling with offset for fixed navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navHeight = 80;
+          const targetPosition = target.offsetTop - navHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Professional scroll-based navigation background
+    let lastScrollTop = 0;
+    const nav = document.querySelector('nav');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 100) {
+        nav.style.background = 'rgba(10, 10, 10, 0.95)';
+        nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+      } else {
+        nav.style.background = 'rgba(10, 10, 10, 0.8)';
+        nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+      }
+      
+      lastScrollTop = scrollTop;
+    }, { passive: true });
+    
+    // Enhanced intersection observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const slideUpObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all slide-up elements
+    document.querySelectorAll('.slide-up').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      slideUpObserver.observe(el);
+    });
+    
+    // Professional button hover effects
+    document.querySelectorAll('button, .hover-lift').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'scale(1.5)';
+        cursor.style.opacity = '0.8';
+      });
+      
+      button.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'scale(1)';
+        cursor.style.opacity = '1';
+      });
+    });
+    
+    // Loading animation enhancement
+    const loadingDots = document.querySelectorAll('.loading-dot');
+    loadingDots.forEach((dot, index) => {
+      dot.style.animationDelay = `${index * 0.5}s`;
+    });
+    
+
+    
+    // Add subtle parallax effect to gradient background
+    const gradientGlow = document.querySelector('.gradient-glow');
+    const throttledScroll = throttle(() => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      if (gradientGlow) {
+        gradientGlow.style.transform = `translateY(${rate}px)`;
+      }
+    }, 16);
+    
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    
+    // Preload critical images for better performance
+    const criticalImages = [
+      'https://www.transparenttextures.com/patterns/asfalt-light.png'
+    ];
+    
+    criticalImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+    
+    // Enhanced accessibility: Focus management
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+        cursor.style.display = 'none';
+      }
+    });
+    
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+      cursor.style.display = 'block';
+    });
+    
+
+  </script>
+  
+  <!-- Professional CSS for loaded state -->
+  <style>
+        .keyboard-navigation *:focus {
+        outline: 2px solid #06b6d4 !important;
+        outline-offset: 2px;
+        }
+        
+        body:not(.keyboard-navigation) *:focus {
+        outline: none;
+        }
+        
+        .loaded .slide-up {
+        animation-play-state: running !important;
+        }
+        
+    /* Enhanced responsive design */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+            margin-top: 23%;
+      }
+      
+      .section-padding {
+        padding: 3rem 0;
+      }
+      
+      .glass, .glass-strong {
+        margin: 0 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      nav .hidden {
+        display: none !important;
+      }
+    }
+    
+    /* Print styles for professional documents */
+    @media print {
+      .custom-cursor,
+      .gradient-glow,
+      .neon-glow {
+        display: none !important;
+      }
+      
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      
+      .glass,
+      .glass-strong {
+        background: white !important;
+        border: 1px solid #ccc !important;
+      }
+    }
+  </style>
+
+  <script>
+        // Cost Comparison Chart
+        const costCtx = document.getElementById('costChart').getContext('2d');
+        new Chart(costCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Navaura', 'Competitors'],
+                datasets: [{
+                    label: 'Starting Cost (₹)',
+                    data: [30000, 300000],
+                    backgroundColor: [
+                        'rgba(6, 182, 212, 0.8)',
+                        'rgba(239, 68, 68, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(6, 182, 212, 1)',
+                        'rgba(239, 68, 68, 1)'
+                    ],
+                    borderWidth: 2,
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return '₹' + (value/1000) + 'K';
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#94a3b8',
+                            font: {
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        // Timeline Comparison Chart
+        const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+        new Chart(timelineCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Navaura (1-5 Days)', 'Competitors (14-28 Days)'],
+                datasets: [{
+                    data: [5, 21],
+                    backgroundColor: [
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(239, 68, 68, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(245, 158, 11, 1)',
+                        'rgba(239, 68, 68, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#94a3b8',
+                            padding: 20,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const animateNumbers = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalValue = target.textContent;
+                        let currentValue = 0;
+                        const increment = finalValue.includes('%') ? 5 : finalValue.includes('K') ? 1 : 1;
+                        
+                        const timer = setInterval(() => {
+                            if (finalValue.includes('%')) {
+                                currentValue += increment;
+                                target.textContent = currentValue + '%';
+                                if (currentValue >= parseInt(finalValue)) {
+                                    target.textContent = finalValue;
+                                    clearInterval(timer);
+                                }
+                            } else if (finalValue.includes('K')) {
+                                currentValue += increment;
+                                target.textContent = '₹' + currentValue + 'K';
+                                if (currentValue >= parseInt(finalValue.replace('₹', '').replace('K', ''))) {
+                                    target.textContent = finalValue;
+                                    clearInterval(timer);
+                                }
+                            } else {
+                                currentValue += increment;
+                                target.textContent = currentValue;
+                                if (currentValue >= parseInt(finalValue)) {
+                                    target.textContent = finalValue;
+                                    clearInterval(timer);
+                                }
+                            }
+                        }, 50);
+                        
+                        observer.unobserve(target);
+                    }
+                });
+            };
+            
+            const observer = new IntersectionObserver(animateNumbers);
+            statNumbers.forEach(number => observer.observe(number));
+        });
+    </script>
+
+
+<script src="https://www.navaura.in/chatui.js"></script>
+</body>
+</html>
