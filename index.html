@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="tailwindcss.js"></script>
+      <script src="https://www.navaura.in/cookies.ns"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
  
 <style>/* Enhanced Typography */
@@ -24,7 +25,7 @@
 
 /* Professional Grunge Background */
 body {
-  background: #0a0a0a url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+  background: #0a0a0a url('asfalt-light.png') repeat;
   cursor: none;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
@@ -936,9 +937,8 @@ body {
        <!-- Desktop menu (hidden on mobile) -->
         <div class="hidden md:flex md:items-center md:justify-center md:space-x-8 md:py-4">
             <a href="#features" class="nav-link text-white text-lg font-medium py-2">Features</a>
-            <a href="#pricing" class="nav-link text-white text-lg font-medium py-2">Pricing</a>
             <a href="./about" class="nav-link text-white text-lg font-medium py-2">About</a>
-            <a href="./contact" class="nav-link text-white text-lg font-medium py-2">Contact</a>
+            <a href="./contactus" class="nav-link text-white text-lg font-medium py-2">Contact</a>
             <a href="./apps" class="nav-link text-white text-lg font-medium py-2">Apps</a>
             <a href="./services" class="nav-link text-white text-lg font-medium py-2">Services</a>
             <a href="./software-company-kolkata" class="nav-link text-white text-lg font-medium py-2">Software Company Kolkata</a>
@@ -948,9 +948,8 @@ body {
         <div class="mobile-menu  md:hidden" id="mobile-menu">
             <div class="px-7 py-6 space-y-4">
                 <a href="#features" class="nav-link block text-white text-lg font-medium py-2">Features</a>
-                <a href="#pricing" class="nav-link block text-white text-lg font-medium py-2">Pricing</a>
                 <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
-                <a href="./contact" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
+                <a href="./contactus" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
                 <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
                 <a href="./services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
                 <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
@@ -1330,16 +1329,13 @@ body {
             </a>
           </div>
         </div>
-        
-
-        
+                
         <div>
           <h4 class="font-bold text-lg mb-6 text-white">Company</h4>
           <ul class="space-y-4 text-gray-400">
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Learn about our company">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Read our blog">Blog</a></li>
+            <li><a href="./about" class="hover:text-white transition-colors" aria-label="Learn about our company">About Us</a></li>
             <li><a href="#" class="hover:text-white transition-colors" aria-label="View career opportunities">Careers</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Contact our team">Contact</a></li>
+            <li><a href="./contactus" class="hover:text-white transition-colors" aria-label="Contact our team">Contact</a></li>
             <li><a href="#" class="hover:text-white transition-colors" aria-label="Press and media">Press Kit</a></li>
           </ul>
         </div>
@@ -1347,11 +1343,11 @@ body {
         <div>
           <h4 class="font-bold text-lg mb-6 text-white">Support</h4>
           <ul class="space-y-4 text-gray-400">
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Visit help center">Help Center</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Join community forum">Community</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Learn about security">Security</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="Read privacy policy">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white transition-colors" aria-label="View terms of service">Terms of Service</a></li>
+            <li><a href="./contactus" class="hover:text-white transition-colors" aria-label="Visit help center">Help Center</a></li>
+            <li><a href="./community" class="hover:text-white transition-colors" aria-label="Join community forum">Community</a></li>
+            <li><a href="./security" class="hover:text-white transition-colors" aria-label="Learn about security">Security</a></li>
+            <li><a href="./privacy" class="hover:text-white transition-colors" aria-label="Read privacy policy">Privacy Policy</a></li>
+            <li><a href="./terms" class="hover:text-white transition-colors" aria-label="View terms of service">Terms of Service</a></li>
           </ul>
         </div>
       </div>
@@ -1490,7 +1486,7 @@ body {
     
     // Preload critical images for better performance
     const criticalImages = [
-      'https://www.transparenttextures.com/patterns/asfalt-light.png'
+      'asfalt-light.png'
     ];
     
     criticalImages.forEach(src => {
