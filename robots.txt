@@ -4,5 +4,34 @@ Allow: /
 User-agent: Mediapartners-Google
 Allow: /
 
-Sitemap: https://www.navaura.in/sitemap.xml
+User-agent: facebookexternalhit
+Allow: /
 
+User-agent: Facebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: *
+Disallow: /cookies.ns
+Disallow: /NewFounder3493.png
+Disallow: /founderSubham.webp
+Disallow: /logo.png
+Disallow: /logow.png
+Disallow: /asfalt-light.png
+Disallow: /favicon.ico
+Disallow: /chart.min.js
+Disallow: /aos.js
+Disallow: /tailwindcss.js
+Disallow: /chatiu.js
+
+Allow: /
+
+Sitemap: https://www.navaura.in/sitemap.xml
