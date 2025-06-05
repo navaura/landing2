@@ -393,11 +393,17 @@
             return formattedText;
         }
 
-        const topics = [
-            "NEW APPS", "SAYVA", "VEDI+", "Web APP services",
-            "Contact to Navaura", "Contact Number", "APP URLS", "What is Navaura?",
-            "What is the Mission?"
-        ];
+const topics = [
+    "What is Navaura?",
+    "NEW APPS",
+    "VEDI+",
+    "SAYVA",
+    "Web APP services",
+    "APP URLS",
+    "Contact to Navaura",
+    "Contact Number"
+];
+
 
         function showTopics() {
             let topicsContainer = document.getElementById("topicsContainer");
