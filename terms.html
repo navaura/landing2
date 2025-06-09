@@ -14,7 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="tailwindcss.js"></script>
-  <link rel="stylesheet" href="basevaura.css">
+<link rel="stylesheet" href="basevaura.css" media="print" onload="this.media='all'">
+
+<link rel="icon" type="image/png" href="./logo.png" sizes="32x32">
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const hamburger = document.getElementById('hamburger');
@@ -42,6 +44,7 @@
   </script>
   <script src="https://www.navaura.in/chatui.js"></script>
 </head>
+<noscript><link rel="stylesheet" href="basevaura.css"></noscript>
 <body class="relative text-white overflow-x-hidden antialiased">
   <!-- Enhanced Grid and Background -->
   <div class="grid-bg absolute inset-0 z-0"></div>
