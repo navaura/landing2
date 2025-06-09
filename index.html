@@ -38,7 +38,7 @@
 <meta name="twitter:image:alt" content="Navaura Arctiq Logo - AI Software Company" />
 <meta name="twitter:site" content="@Navaura_arctiq" />
 <meta name="twitter:creator" content="@Navaura_arctiq" />
-
+<link rel="icon" type="image/x-icon" href="./logow.png">
 <!-- LinkedIn -->
 <meta property="og:image" content="https://www.navaura.in/logo.png" />
 <meta property="og:image:width" content="1200" />
@@ -121,10 +121,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- Scripts -->
-<script src="tailwindcss.js"></script>
+<script src="tailwindcjs" defer></script>
 <script src="https://www.navaura.in/cookies.ns"></script>
 <script src="chart.min.js"></script>
-<link rel="stylesheet" href="basevaura.css">
+<link rel="stylesheet" href="basevaura.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="basevaura.css"></noscript>
 <script src="https://www.navaura.in/chatui.js"></script>
 <!-- Structured Data: Organization Schema for Homepage -->
 <script type="application/ld+json">
@@ -246,23 +247,23 @@
 
        <!-- Desktop menu (hidden on mobile) -->
         <div class="hidden md:flex md:items-center md:justify-center md:space-x-8 md:py-4">
-            <a href="#features" class="nav-link text-white text-lg font-medium py-2">Features</a>
-            <a href="./about" class="nav-link text-white text-lg font-medium py-2">About</a>
-            <a href="./contact" class="nav-link text-white text-lg font-medium py-2">Contact</a>
-            <a href="./apps" class="nav-link text-white text-lg font-medium py-2">Apps</a>
-            <a href="./software-company-kolkata/#services" class="nav-link text-white text-lg font-medium py-2">Services</a>
-            <a href="./software-company-kolkata" class="nav-link text-white text-lg font-medium py-2">Software Company Kolkata</a>
+            <a href="#features" class="nav-link text-white text-lg font-medium py-2" aria-label="Visit Features Section">Features</a>
+            <a href="./about" class="nav-link text-white text-lg font-medium py-2" aria-label="Visit About Us Page">About</a>
+            <a href="./contact" class="nav-link text-white text-lg font-medium py-2" aria-label="Visit Contact Page">Contact</a>
+            <a href="./apps" class="nav-link text-white text-lg font-medium py-2" aria-label="Visit Apps Page">Apps</a>
+            <a href="./software-company-kolkata/#services" class="nav-link text-white text-lg font-medium py-2" aria-label="Visit Services Section">Services</a>
+            <a href="./software-company-kolkata" class="nav-link text-white text-lg font-medium py-2" aria-label="Visit Software Company Kolkata">Software Company Kolkata</a>
         </div>
 
         <!-- Mobile menu -->
         <div class="mobile-menu  md:hidden" id="mobile-menu">
             <div class="px-7 py-6 space-y-4">
-                <a href="#features" class="nav-link block text-white text-lg font-medium py-2">Features</a>
-                <a href="./about" class="nav-link block text-white text-lg font-medium py-2">About</a>
-                <a href="./contact" class="nav-link block text-white text-lg font-medium py-2">Contact</a>
-                <a href="./apps" class="nav-link block text-white text-lg font-medium py-2">Apps</a>
-                <a href="./software-company-kolkata/#services" class="nav-link block text-white text-lg font-medium py-2">Services</a>
-                <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2">Software Company Kolkata</a>
+                <a href="#features" class="nav-link block text-white text-lg font-medium py-2" aria-label="Visit Features Section">Features</a>
+                <a href="./about" class="nav-link block text-white text-lg font-medium py-2" aria-label="Visit About Us Page">About</a>
+                <a href="./contact" class="nav-link block text-white text-lg font-medium py-2" aria-label="Visit Contact Page">Contact</a>
+                <a href="./apps" class="nav-link block text-white text-lg font-medium py-2" aria-label="Visit Apps Page">Apps</a>
+                <a href="./software-company-kolkata/#services" class="nav-link block text-white text-lg font-medium py-2" aria-label="Visit Services Section">Services</a>
+                <a href="./software-company-kolkata" class="nav-link block text-white text-lg font-medium py-2" aria-label="Visit Software Company Kolkata">Software Company Kolkata</a>
             </div>
         </div>
     </nav>
