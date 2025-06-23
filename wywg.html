@@ -130,13 +130,18 @@
       width: 120px;
       height: 120px;
       filter: drop-shadow(0 0 30px rgba(6, 182, 212, 0.8));
-      animation: logoFloat 3s ease-in-out infinite;
+      animation: logoBreath 8s ease-out forwards;
     }
 
-    @keyframes logoFloat {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-    }
+@keyframes logoBreath {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+
 
     .brand-text {
       font-size: 4rem;
@@ -580,7 +585,7 @@
     <div class="cta-title">Ready to Build?</div>
     <div class="cta-subtitle">Join thousands who've transformed their development workflow</div>
     <div class="cta-buttons">
-      <button class="cta-btn cta-btn-primary" href="./">Start Building Now</button>
+      <a class="cta-btn cta-btn-primary" href="https://www.navaura.in">Start Building Now</a>
       <a class="chatui cta-btn cta-btn-secondary" >Chat with Us 24/7</a>
     </div>
   </div>
@@ -623,42 +628,71 @@
     const navDots = document.querySelectorAll('.nav-dot');
     let autoPlayInterval;
 
-    function goToScene(index) {
-      // Remove active from all scenes and dots
-      scenes.forEach(scene => scene.classList.remove('active'));
-      navDots.forEach(dot => dot.classList.remove('active'));
-      
-      // Add active to current scene and dot
-      scenes[index].classList.add('active');
-      navDots[index].classList.add('active');
-      
-      currentScene = index;
-      
-      // Reset autoplay
-      clearInterval(autoPlayInterval);
-      startAutoPlay();
-    }
+function goToScene(index) {
+  scenes.forEach(scene => scene.classList.remove('active'));
+  navDots.forEach(dot => dot.classList.remove('active'));
 
-    function nextScene() {
-      const next = (currentScene + 1) % scenes.length;
-      goToScene(next);
-    }
+  scenes[index].classList.add('active');
+  navDots[index].classList.add('active');
+  currentScene = index;
 
-    function startAutoPlay() {
-      autoPlayInterval = setInterval(() => {
-        nextScene();
-      }, 4000);
-    }
+  // Only restart autoplay if enabled
+  if (isAutoplayEnabled) {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+}
 
-    function skipToEnd() {
-      goToScene(scenes.length - 1);
-    }
+let isAutoplayEnabled = true;
 
-    function startBuilding() {
-      alert('Redirecting to start building...');
-      // Add your redirect logic here
-    }
+let scrollThrottle = false;
+function handleScrollSlide(e) {
+  if (scrollThrottle) return;
+  scrollThrottle = true;
 
+  if (e.deltaY > 0) {
+    nextScene();
+  } else if (e.deltaY < 0) {
+    const prev = currentScene === 0 ? scenes.length - 1 : currentScene - 1;
+    goToScene(prev);
+  }
+
+  setTimeout(() => {
+    scrollThrottle = false;
+  }, 1000); // 1 second throttle
+}
+
+document.addEventListener('wheel', handleScrollSlide, { passive: true });
+
+function startAutoPlay() {
+  if (isAutoplayEnabled) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = setInterval(() => {
+      nextScene();
+    }, 4000);
+  }
+}
+
+
+
+function skipToEnd() {
+  isAutoplayEnabled = false;
+  clearInterval(autoPlayInterval);
+  autoPlayInterval = null;
+  goToScene(scenes.length - 1);
+}
+
+function nextScene() {
+  const next = currentScene + 1;
+  if (next >= scenes.length) {
+    isAutoplayEnabled = false;
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = null;
+    goToScene(scenes.length - 1);
+  } else {
+    goToScene(next);
+  }
+}
 
 
     // Initialize
