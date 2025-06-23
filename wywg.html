@@ -473,8 +473,10 @@
       }
     }
   </style>
+  <script src="https://www.navaura.in/chatui.js"></script>
 </head>
 <body>
+<div id="chatbot"></div>
   <!-- Custom Cursor -->
   <div class="custom-cursor" id="cursor"></div>
 
@@ -579,7 +581,7 @@
     <div class="cta-subtitle">Join thousands who've transformed their development workflow</div>
     <div class="cta-buttons">
       <button class="cta-btn cta-btn-primary" onclick="startBuilding()">Start Building Now</button>
-      <button class="cta-btn cta-btn-secondary" onclick="chatWithUs()">Chat with Us 24/7</button>
+      <a class="chatui cta-btn cta-btn-secondary" >Chat with Us 24/7</a>
     </div>
   </div>
 
@@ -657,10 +659,7 @@
       // Add your redirect logic here
     }
 
-    function chatWithUs() {
-      alert('Opening chat...');
-      // Add your chat logic here
-    }
+
 
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
