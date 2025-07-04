@@ -22,7 +22,52 @@
       pointer-events: none;
       z-index: 0;
     }
-    
+    /* CHART HEIGHT FIX - Add this to your existing CSS */
+
+/* Fix excessive chart height on desktop */
+.chart-container {
+  height: auto !important;
+  min-height: 300px !important;
+  max-height: 380px !important;
+}
+
+/* Add chart wrapper for controlled height */
+.chart-wrapper {
+  position: relative !important;
+  height: 280px !important;
+  width: 100% !important;
+}
+
+/* Desktop specific fixes */
+@media (min-width: 769px) {
+  .chart-container {
+    min-height: 320px !important;
+    max-height: 380px !important;
+  }
+  
+  .chart-wrapper {
+    height: 280px !important;
+  }
+}
+
+/* Mobile chart fixes */
+@media (max-width: 768px) {
+  .chart-container {
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: 300px !important;
+    padding: 1rem !important;
+  }
+
+  .chart-wrapper {
+    height: 180px !important;
+  }
+
+  .chart-title {
+    font-size: 1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+}
     /* Professional RGB Gradient */
 .gradient-glow {
   position: fixed;
