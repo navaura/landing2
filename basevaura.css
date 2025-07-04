@@ -641,7 +641,8 @@
 
 .comparison-container {
   display: grid;
-
+max-height: 20%;
+  height: 475px;
   gap: 3rem;
   margin-top: 3rem;
 }
