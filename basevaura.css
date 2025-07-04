@@ -614,12 +614,12 @@
   z-index: 6;
 }
 
-.comparison-item {
+-item {
   margin-bottom: 4rem;
   pointer-events: none;
 }
 
-.comparison-item:hover {
+-item:hover {
   transform: scale(0)!important;
   pointer-events: none;
 }
@@ -686,7 +686,7 @@
 
 .comparison-container {
   display: grid;
-
+height: 880px;
   gap: 3rem;
   margin-top: 3rem;
 }
