@@ -705,7 +705,7 @@ height: 880px;
 
 .chart-container {
   position: relative;
-  height:396px
+  height:396px;
   padding: 2rem;
   width: 100%;
 }
