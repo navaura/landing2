@@ -2,7 +2,19 @@
     * {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    
+    canvas {
+  /* Size and positioning */
+  width: 800px;
+  height: 600px;
+  
+  /* Border and background */
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+  
+  /* Display properties */
+  display: block;
+  margin: 0 auto; /* Center the canvas */
+}
     /* Professional Grunge Background */
     body {
       background: #0a0a0a url('https://www.navaura.in/asfalt-light.png') repeat;
