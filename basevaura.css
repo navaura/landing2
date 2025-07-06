@@ -41,6 +41,7 @@
   height: auto !important;
   min-height: 300px !important;
   max-height: 380px !important;
+   width: 80%!important;
 }
 
 /* Add chart wrapper for controlled height */
