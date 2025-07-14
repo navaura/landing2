@@ -128,6 +128,7 @@
             line-height: 1.5;
             position: relative;
                 z-index: 2 !important;
+                 background: #ffffff;    
         }
 
         .user-message {
@@ -242,11 +243,11 @@
             align-items: center;
             margin: 16px 0;
             padding: 16px 20px;
-            background: #ffffff;
+            background: #ffffff!important;
             border-radius: 16px;
             max-width: 70%;
             border: 1px solid #e5e5e5;
-            border-bottom-left-radius: 4px;
+            z-index: 4;
         }
 
         .typing-indicator span {
@@ -442,6 +443,126 @@
                 height: 200px;
             }
         }
+        .suggestion2-section {
+    padding: 16px 32px 0;
+    background: #ffffff;
+    border-top: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    max-height: 120px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f9fafb;
+}
+
+.suggestion2-section::-webkit-scrollbar {
+    height: 4px;
+}
+
+.suggestion2-section::-webkit-scrollbar-track {
+    background: #f9fafb;
+}
+
+.suggestion2-section::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 2px;
+}
+
+.suggestion2-container {
+    max-width: 100%;
+}
+
+.suggestion2-title {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.suggestion2-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 4px;
+}
+
+.suggestion2-chip {
+    background: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-weight: 400;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.suggestion2-chip:hover {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+}
+
+.suggestion2-chip:active {
+    transform: translateY(0);
+    background: #d1d5db;
+}
+
+.suggestion2-chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    transition: left 0.5s;
+}
+
+.suggestion2-chip:hover::before {
+    left: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .suggestion2-section {
+        padding: 12px 24px 0;
+        max-height: 100px;
+    }
+    
+    .suggestion2-chip {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .suggestion2-title {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+}
+.input-box:disabled {
+    background: #f5f5f5;
+    color: #9ca3af;
+    cursor: not-allowed;
+    border-color: #e5e5e5;
+}
+
+.send-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.send-button:disabled:hover {
+    background: #9ca3af;
+    transform: none;
+}
     </style>
 </head>
 <body>
@@ -491,7 +612,14 @@
                 </div>
             </div>
         </div>
-        
+        <div class="suggestion2-section" id="suggestion2Section" style="display: none;">
+    <div class="suggestion2-container">
+        <div class="suggestion2-title">Quick suggestions:</div>
+        <div class="suggestion2-chips" id="suggestion2Chips">
+            <!-- Dynamic suggestions will be added here -->
+        </div>
+    </div>
+</div>
         <div class="input-section">
             <div class="input-container">
                 <input type="text" id="userInput" class="input-box" placeholder="Type your message here...">
@@ -514,74 +642,129 @@
             return text;
         }
 
-        // Function to send messages to the API
-        async function sendToApi(message) {
-            try {
-                const requestBody = {
-                    message: message
-                };
-                
-                if (sessionId) {
-                    requestBody.session_id = sessionId;
-                }
 
-                const response = await fetch(chatApiUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(requestBody)
-                });
 
-                if (!response.ok) {
-                    const errorText = await response.text();
-                    console.error("API Error:", response.status, errorText);
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
+// Try to restore session from localStorage on page load
+function initializeSession() {
+    try {
+        const savedSession = localStorage.getItem('krittim_session_id');
+        if (savedSession) {
+            sessionId = savedSession;
+            console.log("Restored session from storage:", sessionId);
+        }
+    } catch (error) {
+        console.log("LocalStorage not available or error reading session");
+    }
+}
 
-                const data = await response.json();
-                
-                if (data.session_id) {
-                    sessionId = data.session_id;
-                    console.log("Session established:", sessionId);
-                }
-                
-                return cleanUrlFormat(data.response);
-            } catch (error) {
-                console.error("Error sending message:", error);
-                return "Sorry, there was an error processing your request. Please try again.";
+// Save session to localStorage
+function saveSessionToStorage(session) {
+    try {
+        localStorage.setItem('krittim_session_id', session);
+    } catch (error) {
+        console.log("Could not save session to storage");
+    }
+}
+
+// Clear session from storage
+function clearSessionFromStorage() {
+    try {
+        localStorage.removeItem('krittim_session_id');
+    } catch (error) {
+        console.log("Could not clear session from storage");
+    }
+}
+
+// Enhanced sendToApi function with better session handling
+async function sendToApi(message) {
+    try {
+        const requestBody = {
+            message: message
+        };
+        
+        // Always include session_id if we have one
+        if (sessionId) {
+            requestBody.session_id = sessionId;
+            console.log("Sending with session:", sessionId);
+        }
+
+        const response = await fetch(chatApiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error("API Error:", response.status, errorText);
+            
+            // If it's a session-related error, reset session
+            if (response.status === 401 || response.status === 403) {
+                console.log("Session may be invalid, resetting...");
+                resetSession();
+            }
+            
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        
+        // Handle session ID from response
+        if (data.session_id) {
+            if (!sessionId) {
+                // New session
+                sessionId = data.session_id;
+                saveSessionToStorage(sessionId);
+                console.log("New session established:", sessionId);
+            } else if (sessionId !== data.session_id) {
+                // Session changed
+                console.log("Session ID changed from", sessionId, "to", data.session_id);
+                sessionId = data.session_id;
+                saveSessionToStorage(sessionId);
+            } else {
+                // Session maintained
+                console.log("Session maintained:", sessionId);
             }
         }
+        
+        return cleanUrlFormat(data.response);
+    } catch (error) {
+        console.error("Error sending message:", error);
+        return "Sorry, there was an error processing your request. Please try again.";
+    }
+}
 
-        function formatResult(result) {
-            let formattedText = result;
-            
-            // Format URLs as clickable links FIRST
-            formattedText = formattedText.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
-            
-            // Handle markdown formatting
-            formattedText = formattedText.replace(/##\s*(.+?)(\n|$)/g, '<h2>$1</h2>');
-            formattedText = formattedText.replace(/#\s*(.+?)(\n|$)/g, '<h1>$1</h1>');
-            formattedText = formattedText.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-            formattedText = formattedText.replace(/\*(.+?)\*/g, '<em>$1</em>');
-            formattedText = formattedText.replace(/(Key Insights:)/g, '<strong>$1</strong>');
-            
-            // Handle bullet points
-            formattedText = formattedText.replace(/^\*\s*(.+?)$/gm, '<li>$1</li>');
-            formattedText = formattedText.replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$1</ul>');
-            
-            // Handle numbered lists
-            formattedText = formattedText.replace(/^\d+\.\s*(.+?)$/gm, '<li>$1</li>');
-            formattedText = formattedText.replace(/(<li>[\s\S]*?<\/li>)/g, '<ol>$1</ol>');
-            
-            // Handle horizontal rules
-            formattedText = formattedText.replace(/\n(-{3}|\*{3})\n/g, '<hr/>');
-            
-            // Convert newlines to <br> tags
-            formattedText = formattedText.replace(/\n/g, '<br>');
-            
-            return formattedText;
-        }
+function formatResult(result) {
+    let formattedText = result;
+    
+    // Format URLs as clickable links with improved regex to avoid capturing trailing punctuation
+    formattedText = formattedText.replace(/(https?:\/\/[^\s<>"]+?)(?=[.,;:!?]?\s|[.,;:!?]?$|<|")/g, '<a href="$1" target="_blank">$1</a>');
+    
+    // Handle markdown formatting
+    formattedText = formattedText.replace(/##\s*(.+?)(\n|$)/g, '<h2>$1</h2>');
+    formattedText = formattedText.replace(/#\s*(.+?)(\n|$)/g, '<h1>$1</h1>');
+    formattedText = formattedText.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    formattedText = formattedText.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    formattedText = formattedText.replace(/(Key Insights:)/g, '<strong>$1</strong>');
+    
+    // Handle bullet points
+    formattedText = formattedText.replace(/^\*\s*(.+?)$/gm, '<li>$1</li>');
+    formattedText = formattedText.replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$1</ul>');
+    
+    // Handle numbered lists
+    formattedText = formattedText.replace(/^\d+\.\s*(.+?)$/gm, '<li>$1</li>');
+    formattedText = formattedText.replace(/(<li>[\s\S]*?<\/li>)/g, '<ol>$1</ol>');
+    
+    // Handle horizontal rules
+    formattedText = formattedText.replace(/\n(-{3}|\*{3})\n/g, '<hr/>');
+    
+    // Convert newlines to <br> tags
+    formattedText = formattedText.replace(/\n/g, '<br>');
+    
+    return formattedText;
+}
 
         function hideSuggestionCards() {
             const suggestionCards = document.getElementById("suggestionCards");
@@ -605,76 +788,137 @@
             }
         }
 
-        function showTypingIndicator() {
-            const chatBox = document.getElementById("chatBox");
-            const typingDiv = document.createElement("div");
-            typingDiv.className = "typing-indicator";
-            typingDiv.id = "typingIndicator";
-            typingDiv.innerHTML = `
-                <span></span>
-                <span></span>
-                <span></span>
-                <div class="typing-indicator-text">KRITTIM is typing...</div>
-            `;
-            chatBox.appendChild(typingDiv);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
+function showTypingIndicator() {
+    const chatBox = document.getElementById("chatBox");
+    const userInput = document.getElementById("userInput");
+    const sendBtn = document.getElementById("sendBtn");
+    
+    // Disable input and button
+    userInput.disabled = true;
+    sendBtn.disabled = true;
+    
+    const typingDiv = document.createElement("div");
+    typingDiv.className = "typing-indicator";
+    typingDiv.id = "typingIndicator";
+    typingDiv.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="typing-indicator-text">KRITTIM is typing...</div>
+    `;
+    chatBox.appendChild(typingDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-        function hideTypingIndicator() {
-            const typingIndicator = document.getElementById("typingIndicator");
-            if (typingIndicator) {
-                typingIndicator.remove();
+function hideTypingIndicator() {
+    const typingIndicator = document.getElementById("typingIndicator");
+    const userInput = document.getElementById("userInput");
+    const sendBtn = document.getElementById("sendBtn");
+    
+    // Re-enable input and button
+    userInput.disabled = false;
+    sendBtn.disabled = false;
+    
+    if (typingIndicator) {
+        typingIndicator.remove();
+    }
+}
+
+async function sendMessage(message = null) {
+    const input = document.getElementById("userInput");
+    const chatBox = document.getElementById("chatBox");
+    
+    const userMessage = message || input.value.trim();
+    
+    if (userMessage !== "") {
+        // Hide suggestion cards on first message
+        hideSuggestionCards();
+        
+        // Hide suggestion2 temporarily while processing
+        hideSuggestion2();
+
+        // Add user message to chat
+        const userDiv = document.createElement("div");
+        userDiv.className = "message user-message";
+        userDiv.innerHTML = userMessage;
+        chatBox.appendChild(userDiv);
+        
+        // Clear input and show typing indicator
+        if (input) input.value = "";
+        showTypingIndicator();
+        chatBox.scrollTop = chatBox.scrollHeight;
+        
+        try {
+            // Get response from API
+            const response = await sendToApi(userMessage);
+            
+            // Hide typing indicator
+            hideTypingIndicator();
+            
+            // Create bot response div
+            const botDiv = document.createElement("div");
+            botDiv.className = "message bot-message";
+            botDiv.innerHTML = ""; // Start empty
+            chatBox.appendChild(botDiv);
+            
+            // Type out the response with smooth effect
+            await typeWriterEffect(botDiv, formatResult(response));
+            
+            // Show contextual suggestions after response is complete
+            updateContextualSuggestions(userMessage);
+            
+} catch (error) {
+    hideTypingIndicator();
+    
+    // Re-enable input in case of error
+    const userInput = document.getElementById("userInput");
+    const sendBtn = document.getElementById("sendBtn");
+    userInput.disabled = false;
+    sendBtn.disabled = false;
+    
+    const errorDiv = document.createElement("div");
+    errorDiv.className = "message bot-message";
+    errorDiv.innerHTML = "Sorry, there was an error processing your request. Please try again.";
+    chatBox.appendChild(errorDiv);
+    
+    console.error("Message sending error:", error);
+}
+        
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+}
+
+
+
+function typeWriterEffect(element, text, speed = 30) {
+    return new Promise((resolve) => {
+        const userInput = document.getElementById("userInput");
+        const sendBtn = document.getElementById("sendBtn");
+        
+        // Disable input during typewriter effect
+        userInput.disabled = true;
+        sendBtn.disabled = true;
+        
+        let index = 0;
+        const chatBox = document.getElementById("chatBox");
+        
+        function type() {
+            if (index < text.length) {
+                element.innerHTML = text.substring(0, index + 1);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                index++;
+                setTimeout(type, speed);
+            } else {
+                // Re-enable input when typewriter is complete
+                userInput.disabled = false;
+                sendBtn.disabled = false;
+                resolve();
             }
         }
-
-        async function sendMessage(message = null) {
-            const input = document.getElementById("userInput");
-            const chatBox = document.getElementById("chatBox");
-            
-            const userMessage = message || input.value.trim();
-            
-            if (userMessage !== "") {
-                // Hide suggestion cards on first message
-                hideSuggestionCards();
-
-                // Add user message to chat
-                const userDiv = document.createElement("div");
-                userDiv.className = "message user-message";
-                userDiv.innerHTML = userMessage;
-                chatBox.appendChild(userDiv);
-                
-                // Clear input and show typing indicator
-                if (input) input.value = "";
-                showTypingIndicator();
-                chatBox.scrollTop = chatBox.scrollHeight;
-                
-                try {
-                    // Get response from API
-                    const response = await sendToApi(userMessage);
-                    
-                    // Hide typing indicator
-                    hideTypingIndicator();
-                    
-                    // Add bot response
-                    const botDiv = document.createElement("div");
-                    botDiv.className = "message bot-message";
-                    botDiv.innerHTML = formatResult(response);
-                    chatBox.appendChild(botDiv);
-                    
-                } catch (error) {
-                    hideTypingIndicator();
-                    
-                    const errorDiv = document.createElement("div");
-                    errorDiv.className = "message bot-message";
-                    errorDiv.innerHTML = "Sorry, there was an error processing your request. Please try again.";
-                    chatBox.appendChild(errorDiv);
-                    
-                    console.error("Message sending error:", error);
-                }
-                
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-        }
+        
+        type();
+    });
+}
 
         // Initialize the chatbot
         document.addEventListener("DOMContentLoaded", function() {
@@ -707,5 +951,104 @@
             }
         });
     </script>
+    <script>
+// Define contextual suggestions based on conversation topics
+const contextualSuggestions = {
+    default: [
+        "Tell me more about this",
+        "What are the key features?",
+        "How can I get started?",
+        "What are the benefits?",
+        "Show me examples"
+    ],
+    apps: [
+        "What's new in latest version?",
+        "How to download?",
+        "System requirements?",
+        "Pricing information",
+        "User reviews"
+    ],
+    sayva: [
+        "How to use SAYVA?",
+        "SAYVA pricing",
+        "SAYVA features",
+        "Integration options",
+        "Support documentation"
+    ],
+    vedi: [
+        "VEDI+ capabilities",
+        "How to access VEDI+?",
+        "VEDI+ tutorials",
+        "Platform requirements",
+        "Success stories"
+    ],
+    services: [
+        "Development process",
+        "Project timeline",
+        "Cost estimates",
+        "Portfolio examples",
+        "Contact information"
+    ]
+};
+
+// Function to show suggestion2 section
+function showSuggestion2(suggestions = contextualSuggestions.default) {
+    const section = document.getElementById("suggestion2Section");
+    const chipsContainer = document.getElementById("suggestion2Chips");
+    
+    // Clear existing chips
+    chipsContainer.innerHTML = "";
+    
+    // Add new chips
+    suggestions.forEach(suggestion => {
+        const chip = document.createElement("div");
+        chip.className = "suggestion2-chip";
+        chip.textContent = suggestion;
+        chip.addEventListener("click", () => {
+            sendMessage(suggestion);
+        });
+        chipsContainer.appendChild(chip);
+    });
+    
+    // Show the section
+    section.style.display = "block";
+    
+    // Add smooth entrance animation
+    setTimeout(() => {
+        section.style.opacity = "1";
+        section.style.transform = "translateY(0)";
+    }, 10);
+}
+
+// Function to hide suggestion2 section
+function hideSuggestion2() {
+    const section = document.getElementById("suggestion2Section");
+    if (section) {
+        section.style.display = "none";
+    }
+}
+
+// Function to determine context from message and show relevant suggestions
+function updateContextualSuggestions(userMessage) {
+    const message = userMessage.toLowerCase();
+    let suggestions = contextualSuggestions.default;
+    
+    if (message.includes('app') || message.includes('application')) {
+        suggestions = contextualSuggestions.apps;
+    } else if (message.includes('sayva')) {
+        suggestions = contextualSuggestions.sayva;
+    } else if (message.includes('vedi')) {
+        suggestions = contextualSuggestions.vedi;
+    } else if (message.includes('service') || message.includes('development') || message.includes('web')) {
+        suggestions = contextualSuggestions.services;
+    }
+    
+    // Show suggestions after a brief delay
+    setTimeout(() => {
+        showSuggestion2(suggestions);
+    }, 1000);
+}
+
+</script>
 </body>
 </html>
