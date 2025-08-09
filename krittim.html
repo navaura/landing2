@@ -585,8 +585,22 @@
                 <p>here you will get our full support via AI customer Chatbot</p>
                 <p>I'm here to help you with information about Navaura's services, apps, and more. Choose a topic below to get started.</p>
             </div>
-            
+
+
             <div class="suggestion-cards" id="suggestionCards">
+
+                <div class="suggestion-card" data-query="How Navaura Works?">
+                    <div class="card-icon">🚀</div>
+                    <h3>What is Navaura?</h3>
+                    <p>Learn about what we actually do at Navaura and how we do it.</p>
+                </div>
+
+                <div class="suggestion-card" data-query="How to connect with Navaura? generic and also if Important!!">
+                    <div class="card-icon">🌐</div>
+                    <h3>How to contact with us</h3>
+                    <p>Learn about How to contact with Navaura for support and inquiries.</p>
+                </div>
+
                 <div class="suggestion-card" data-query="Tell me about Navaura's newest applications">
                     <div class="card-icon">🚀</div>
                     <h3>Discover New Apps</h3>
@@ -605,11 +619,7 @@
                     <p>Discover the powerful features and functionalities of the VEDI+ platform and its applications.</p>
                 </div>
                 
-                <div class="suggestion-card" data-query="What web application services does Navaura offer?">
-                    <div class="card-icon">🌐</div>
-                    <h3>Web App Services</h3>
-                    <p>Learn about Navaura's comprehensive web application services and development solutions.</p>
-                </div>
+
             </div>
         </div>
         <div class="suggestion2-section" id="suggestion2Section" style="display: none;">
@@ -807,8 +817,13 @@ function showTypingIndicator() {
         <div class="typing-indicator-text">KRITTIM is typing...</div>
     `;
     chatBox.appendChild(typingDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
+    
+    // Ensure scroll after typing indicator is added
+    requestAnimationFrame(() => {
+        chatBox.scrollTop = chatBox.scrollHeight;
+    });
 }
+
 
 function hideTypingIndicator() {
     const typingIndicator = document.getElementById("typingIndicator");
@@ -843,10 +858,19 @@ async function sendMessage(message = null) {
         userDiv.innerHTML = userMessage;
         chatBox.appendChild(userDiv);
         
+        // Immediate scroll after user message
+        requestAnimationFrame(() => {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+        
         // Clear input and show typing indicator
         if (input) input.value = "";
         showTypingIndicator();
-        chatBox.scrollTop = chatBox.scrollHeight;
+        
+        // Scroll after typing indicator is added
+        requestAnimationFrame(() => {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
         
         try {
             // Get response from API
@@ -861,57 +885,103 @@ async function sendMessage(message = null) {
             botDiv.innerHTML = ""; // Start empty
             chatBox.appendChild(botDiv);
             
+            // Scroll after adding bot div
+            requestAnimationFrame(() => {
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+            
             // Type out the response with smooth effect
             await typeWriterEffect(botDiv, formatResult(response));
+            
+            // Final scroll after typewriter completion
+            requestAnimationFrame(() => {
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
             
             // Show contextual suggestions after response is complete
             updateContextualSuggestions(userMessage);
             
-} catch (error) {
-    hideTypingIndicator();
-    
-    // Re-enable input in case of error
-    const userInput = document.getElementById("userInput");
-    const sendBtn = document.getElementById("sendBtn");
-    userInput.disabled = false;
-    sendBtn.disabled = false;
-    
-    const errorDiv = document.createElement("div");
-    errorDiv.className = "message bot-message";
-    errorDiv.innerHTML = "Sorry, there was an error processing your request. Please try again.";
-    chatBox.appendChild(errorDiv);
-    
-    console.error("Message sending error:", error);
-}
-        
-        chatBox.scrollTop = chatBox.scrollHeight;
+            // Scroll after suggestions are shown and focus input on desktop
+            setTimeout(() => {
+                requestAnimationFrame(() => {
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
+                
+                // Focus input field on desktop only after everything is complete
+                if (window.innerWidth > 768) {
+                    const userInput = document.getElementById("userInput");
+                    userInput.focus();
+                }
+            }, 200);
+            
+        } catch (error) {
+            hideTypingIndicator();
+            
+            // Re-enable input in case of error
+            const userInput = document.getElementById("userInput");
+            const sendBtn = document.getElementById("sendBtn");
+            userInput.disabled = false;
+            sendBtn.disabled = false;
+            
+            // Focus on desktop after error
+            if (window.innerWidth > 768) {
+                setTimeout(() => {
+                    userInput.focus();
+                }, 100);
+            }
+            
+            const errorDiv = document.createElement("div");
+            errorDiv.className = "message bot-message";
+            errorDiv.innerHTML = "Sorry, there was an error processing your request. Please try again.";
+            chatBox.appendChild(errorDiv);
+            
+            // Scroll after error message
+            requestAnimationFrame(() => {
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+            
+            console.error("Message sending error:", error);
+        }
     }
 }
-
-
 
 function typeWriterEffect(element, text, speed = 30) {
     return new Promise((resolve) => {
         const userInput = document.getElementById("userInput");
         const sendBtn = document.getElementById("sendBtn");
+        const chatBox = document.getElementById("chatBox");
         
         // Disable input during typewriter effect
         userInput.disabled = true;
         sendBtn.disabled = true;
         
         let index = 0;
-        const chatBox = document.getElementById("chatBox");
         
         function type() {
             if (index < text.length) {
                 element.innerHTML = text.substring(0, index + 1);
-                chatBox.scrollTop = chatBox.scrollHeight;
+                // Force scroll on every character for smooth following
+                requestAnimationFrame(() => {
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
                 index++;
                 setTimeout(type, speed);
             } else {
+                // Final scroll after completion
+                requestAnimationFrame(() => {
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
                 // Re-enable input when typewriter is complete
                 userInput.disabled = false;
                 sendBtn.disabled = false;
+                
+                // Focus input field on desktop only (not on mobile)
+                if (window.innerWidth > 768) {
+                    setTimeout(() => {
+                        userInput.focus();
+                    }, 100);
+                }
+                
                 resolve();
             }
         }
@@ -919,7 +989,6 @@ function typeWriterEffect(element, text, speed = 30) {
         type();
     });
 }
-
         // Initialize the chatbot
         document.addEventListener("DOMContentLoaded", function() {
             // Add event listeners for suggestion cards
@@ -988,6 +1057,21 @@ const contextualSuggestions = {
         "Cost estimates",
         "Portfolio examples",
         "Contact information"
+    
+    ],
+    web: [
+        "Web app features",
+        "How to request a service?",
+        "Web app pricing",
+        "Client testimonials",
+        "Technical support options"
+    ],
+    what_is_the_work: [
+        "What is the work process?",
+        "How does the workflow look like?",
+        "What tools are used?",
+        "Who is involved in the process?",
+        "What are the deliverables?"
     ]
 };
 
@@ -995,6 +1079,7 @@ const contextualSuggestions = {
 function showSuggestion2(suggestions = contextualSuggestions.default) {
     const section = document.getElementById("suggestion2Section");
     const chipsContainer = document.getElementById("suggestion2Chips");
+    const chatBox = document.getElementById("chatBox");
     
     // Clear existing chips
     chipsContainer.innerHTML = "";
@@ -1017,6 +1102,11 @@ function showSuggestion2(suggestions = contextualSuggestions.default) {
     setTimeout(() => {
         section.style.opacity = "1";
         section.style.transform = "translateY(0)";
+        
+        // Scroll after suggestions are shown
+        requestAnimationFrame(() => {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
     }, 10);
 }
 
