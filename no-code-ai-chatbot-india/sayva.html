@@ -725,7 +725,7 @@ async function sendMessage() {
   document.getElementById('chat-messages').appendChild(typingDiv);
 
   try {
-    const res = await fetch(`/api/chat/${currentBot.id}`, {
+    const res = await fetch(`https://sayva.navaura.in/api/chat/${currentBot.id}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message, session_id: currentBot.session_id || null })
