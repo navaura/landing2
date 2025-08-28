@@ -573,10 +573,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div class="custom-cursor" id="cursor"></div>
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
 <script>
 let availableBots = [];
 let currentBot = null;
 let isLoading = false;
+
+// Configure marked.js options
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false
+});
   
 // Load marketplace bots
 async function loadMarketplaceBots() {
@@ -653,7 +663,7 @@ function showFallbackBot() {
   updateBotDisplay();
 }
 
-// Add message to chat
+// Add message to chat with markdown support
 function addMessage(content, isUser = false) {
   const chatMessages = document.getElementById('chat-messages');
   const messageDiv = document.createElement('div');
@@ -662,7 +672,10 @@ function addMessage(content, isUser = false) {
   const senderName = isUser ? 'You' : (currentBot?.name || 'Bot');
   const senderClass = isUser ? 'text-blue-300' : 'text-cyan-300';
   
-  messageDiv.innerHTML = `<strong class="${senderClass}">${senderName}:</strong> ${content}`;
+  // Process content with marked.js for AI messages, keep user messages as plain text
+  const processedContent = isUser ? content : marked.parse(content);
+  
+  messageDiv.innerHTML = `<strong class="${senderClass}">${senderName}:</strong> <div class="message-content">${processedContent}</div>`;
   chatMessages.appendChild(messageDiv);
   
   // Scroll to bottom
@@ -678,10 +691,10 @@ function simulateBotResponse(userMessage) {
     "That's an interesting point! Tell me more about that.",
     "I understand. How does that make you feel?",
     "Thanks for sharing that with me. What would you like to explore next?",
-    "That's a great question! Let me think about that...",
+    "That's a **great question**! Let me think about that...",
     "I appreciate you bringing that up. Can you elaborate?",
     "Interesting perspective! I'd love to hear more of your thoughts.",
-    "That resonates with me. What's your experience been like?"
+    "That resonates with me. What's your experience been like?\n\n*Here are some things to consider:*\n- Your personal background\n- Recent experiences\n- Future goals"
   ];
   
   // Add typing indicator
