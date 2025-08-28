@@ -708,17 +708,43 @@ function simulateBotResponse(userMessage) {
 }
 
 // Send message
-function sendMessage() {
+async function sendMessage() {
   const input = document.getElementById('chat-input');
   const message = input.value.trim();
-  
-  if (message && !isLoading) {
-    addMessage(message, true);
-    input.value = '';
-    
-    // Simulate bot response
-    setTimeout(() => simulateBotResponse(message), 500);
+  if (!message || isLoading) return;
+
+  addMessage(message, true);
+  input.value = '';
+  isLoading = true;
+
+  // Show typing indicator
+  const typingDiv = document.createElement('div');
+  typingDiv.className = 'chat-bubble ai';
+  typingDiv.innerHTML = `<strong class="text-cyan-300">${currentBot?.name || 'Bot'}:</strong> <span class="text-gray-400">typing...</span>`;
+  typingDiv.id = 'typing-indicator';
+  document.getElementById('chat-messages').appendChild(typingDiv);
+
+  try {
+    const res = await fetch(`/api/chat/${currentBot.id}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message, session_id: currentBot.session_id || null })
+    });
+    const data = await res.json();
+
+    document.getElementById('typing-indicator').remove();
+    if (data.response) {
+      addMessage(data.response, false);
+      currentBot.session_id = data.session_id; // persist session
+    } else {
+      addMessage("⚠️ Error: " + (data.error || "No response"), false);
+    }
+  } catch (err) {
+    document.getElementById('typing-indicator').remove();
+    addMessage("⚠️ Failed to connect to AI", false);
+    console.error(err);
   }
+  isLoading = false;
 }
 
 // Event listeners
