@@ -19,19 +19,11 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+# Global rules for all other bots
 User-agent: *
 Disallow: /cookies.ns
-Disallow: /NewFounder3493.png
-Disallow: /founderSubham.webp
-Disallow: /logo.png
-Disallow: /logow.png
-Disallow: /asfalt-light.png
-Disallow: /favicon.ico
-Disallow: /chart.min.js
-Disallow: /aos.js
-Disallow: /tailwindcss.js
-Disallow: /chatiu.js
-
+# (Keep sensitive files disallowed, but allow CSS/JS/Images for rendering)
 Allow: /
 
+# Sitemap for better crawling
 Sitemap: https://www.navaura.in/sitemap.xml
